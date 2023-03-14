@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB about us</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../css/about.css">
+
+</head>
+
+<body>
+    <!-- nav -->
+    <div class="nav navbtt"></div>
+
+    <!-------- content -------->
+    <div class="topbg">
+        <h1 class="h1_sub">關於我們</h1>
+    </div>
+
+    <!-- about -->
+    <main class="about">
+        <h2>About<br>Stars<br>Blooming</h2>
+        <p class="left vertical">自然美與現代時尚完美結合</p>
+        <p class="right vertical">給獨一無二的你</p>
+        <div class="text">
+            <p>充滿好奇心、喜歡體驗生活的兩個人碰撞在一起，<br>意外誕生了以乾燥花、草、果實為主題的滿天星飾品手作。</p>
+            <p>我們相信，花朵代表著生命、美麗，透過把花朵帶入時尚的設計中，<br>可以將自然的美麗注入到人們的日常生活中。</p>
+            <p>兩人的工作室，追求完美的作品，<br>期待獨一無二的花獻給獨一無二的您！<br>讓小花小草成為大英雄，帶你看進被生活遺忘的美好角落！ </p>
+        </div>
+    </main>
+
+    <!-- our name -->
+    <div class="name container">
+        <svg class="namesvg" width="430" height="365" viewBox="0 0 430 365" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M170.146 9.80222C217.798 25.9146 222.652 67.5054 281.775 123.406C340.899 179.307 434.321 174.456 429.845 229.382C425.116 287.406 363.381 331.572 300.307 351.52C244.713 369.101 172.604 371.717 118.082 345.866C68.1192 322.175 45.8767 275.498 30.2794 229.382C13.266 179.079 -15.6077 115.292 10.4243 61.6456C35.1878 10.6128 95.1389 -15.5597 170.146 9.80222Z"
+                fill="#E1CFB7" />
+        </svg>
+        <p class="left vertical">你，只有你</p>
+        <p class="right vertical">將會擁有會笑的星星</p>
+        <p class="last vertical">—— 小王子</p>
+        <div class="text">
+            <h2>Our Name</h2>
+            <p>滿天星是一種花材，是我們最初的產品材料班底，<br>此外，它也承載著我們對這間店的期許：<br>「希望你可以在這裡找到屬於你最適合你的那顆星星。」</p>
+        </div>
+    </div>
+
+    <!-- history -->
+    <div class="history container">
+        <h2>History<br>since 2020</h2>
+        <ul>
+            <li>
+                <h3>2020.12<br>政大聖誕市集擺攤</h3>
+                <p>這是我們第一次合作，這個時候雖然也是兩個人工作室， 但主要賣的是甜點，因為我們都是螞蟻人！</p>
+            </li>
+            <li>
+                <h3>2021.01<br>公館水源市集擺攤</h3>
+                <p>在學校以外的地方擺攤， 認識了不同的專業商家，相互交流，並學習到如何打造攤位擺設！ 這時我們才開始販售乾燥花商品！獲得好評！</p>
+            </li>
+            <li>
+                <h3>2022.02<br>正式成立「滿天星」</h3>
+                <p>商品的風格及品質逐漸穩定後，我們終於成立了滿天星花飾，期待可以將乾燥花的療癒帶給更多人。</p>
+            </li>
+            <li>
+                <h3>2022.04<br>線上販售商品</h3>
+                <p>我們開始經營 IG ，並在蝦皮上販售商品，逐步拓展市場的同時， 也確立、增加常態商品的品項。</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- btt btn -->
+    <a href="#" class="btt"><img src="../images/ele/btt.svg" alt=""></a>
+    <!-- footer -->
+    <div class="footer"></div>
+
+    <!-- btt script -->
+    <script>
+        // 區塊的最上方距離 document 最上方有多遠
+        const linkScroll = $(".navbtt").offset().top;
+
+        //返回時長 0.6秒
+        $(".btt").click(function (e) {
+            e.preventDefault();
+            $("html,body").animate(
+                {
+                    scrollTop: linkScroll,
+                },
+                600
+            );
+        });
+
+        //優化 – 離頂點超過 ?px 時，才出現 btt
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > (linkScroll)) {
+                if ($(".btt").hasClass("hide")) {
+                    $(".btt").toggleClass("hide");
+                }
+            } else {
+                $(".btt").addClass("hide");
+            }
+        });
+    </script>
+    <!-- default html – header / footer -->
+    <script>
+        $(function () {
+            $(".nav").load("default.html .nav>nav");
+            $(".footer").load("default.html .footer>footer");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+/* default */
+@import url("reset.css");
+@import url("default.css");
+
+
+/* about default */
+h2 {
+    font-size: 100px;
+    font-weight: 900;
+    line-height: 140px;
+    letter-spacing: 0.18em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--pri_rice);
+
+    margin-right: 50px;
+}
+
+p.vertical {
+    writing-mode: vertical-lr;
+    letter-spacing: 8px;
+    padding: 14px 4px 6px;
+    background-color: var(--pri_rice);
+
+    position: absolute;
+}
+
+/* content title */
+.topbg {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+
+    background-color: rgba(255, 255, 255, 0.4);
+    /* 混合模式 normal | mutiply(愈疊愈暗)|screen(愈疊愈亮) */
+    background-blend-mode: screen;
+    background-image: url("../images/bg/flower.jpg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: -180px -240px;
+
+    box-sizing: border-box;
+    padding-top: 100px;
+}
+
+/* about satrs blooming */
+.about {
+    /* height: 800px; */
+    display: flex;
+    padding: 200px 100px 0;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 130px;
+}
+
+.about p.left {
+    left: 520px;
+    top: 120px;
+}
+
+.about p.right {
+    left: 610px;
+    top: 305px;
+}
+
+.about .text {
+    padding-top: 10px;
+}
+
+.about .text p {
+    margin-bottom: 40px;
+}
+
+/* our name */
+.name {
+    height: 400px;
+    position: relative;
+    margin-bottom: 145px;
+}
+
+.namesvg {
+    position: absolute;
+    left: 30px;
+    bottom: 50px;
+
+}
+
+.name .left {
+    left: 300px;
+    top: 70px;
+    background-color: var(--pri_pink);
+}
+
+.name .right {
+    left: 390px;
+    top: 140px;
+    background-color: var(--pri_pink);
+}
+
+.name .last {
+    left: 470px;
+    top: 280px;
+    font-size: 14px;
+    text-align: center;
+    background-color: transparent;
+    white-space: nowrap;
+}
+
+.name .text {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.name .text p {
+    display: inline-block;
+    text-align: center;
+    padding: 70px 150px 0 0;
+}
+
+/* earring png */
+.name::after {
+    content: "";
+    width: 450px;
+    height: 450px;
+    background-image: url("../images/product/nobgEucalyptus.png");
+    background-size: contain;
+    position: absolute;
+    right: 120px;
+    transform: rotateZ(60deg);
+    filter: drop-shadow(10px 0px 7px rgba(0, 0, 0, 0.3))
+}
+
+/* history */
+.history {
+    padding-bottom: 600px;
+    box-sizing: border-box;
+}
+
+.history h2 {
+    position: relative;
+    left: 20px;
+}
+
+.history h3 {
+    font-family: 'Kaisei Decol';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+    margin-bottom: 10px;
+}
+
+.history ul {
+    padding: 0 25px;
+    display: flex;
+    position: relative;
+    top: 40px;
+    /* 和 h2 分開 */
+}
+
+.history ul li {
+    width: 220px;
+    position: absolute;
+}
+
+.history ul li:nth-child(2) {
+    left: 312px;
+    top: 100px;
+}
+
+.history ul li:nth-child(3) {
+    left: 624px;
+    top: 30px;
+}
+
+.history ul li:nth-child(4) {
+    left: 936px;
+    top: -140px;
+}
+
+.history ul li::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: var(--pri_brown);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -20px;
+    left: 3px;
+    z-index: -10;
+}
+
+.history ul li::before {
+    content: "";
+    width: 1px;
+    height: 250px;
+    background-color: var(--pri_brown);
+    position: absolute;
+    bottom: -270px;
+    left: 6px;
+    z-index: -10;
+}
+
+/* footer */
+footer {
+    background-color: transparent;
+}
+
+.footer {
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    width: 100%;
+    height: 800px;
+
+    background-image: url("../images/bg/aboutFooter.png");
+    background-position: center -300px;
+    z-index: -1;
+    background-size: 110%;
+    position: absolute;
+    bottom: 0;
+}

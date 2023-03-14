@@ -1,0 +1,196 @@
+/* default */
+@import url("reset.css");
+@import url("default.css");
+
+body {
+    height: 2000px;
+}
+
+.title {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+
+/* aside - left */
+
+.menu {
+    background-color: var(--pri_green);
+    float: left;
+    border: 1px solid rebeccapurple;
+    position: sticky;
+    left: 110px;
+    top: 120px;
+
+    padding: 40px;
+    box-sizing: border-box;
+
+}
+
+.menu li a {
+    text-decoration: none;
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 34px;
+    letter-spacing: 0.3em;
+    color: #fff;
+}
+
+/* main - right */
+/* main {
+    border: 1px solid black;
+    overflow: hidden; 
+    clear float
+    height: auto;
+} */
+
+.right {
+    /* border: 1px solid rebeccapurple; */
+    float: right;
+    width: 960px;
+    height: 1000px;
+}
+
+.top {
+    /* border: 1px solid rebeccapurple; */
+    width: 100%;
+    height: 450px;
+    position: relative;
+    margin-bottom: 60px;
+}
+.g1 h3{
+    color: #ffffffbc;
+    font-size: 30px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700;
+    line-height: 52px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+.g1 h4{
+    color: #ffffffbc;
+    font-family: 'Kaisei Decol', serif;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 0.5em;
+}
+
+.g1 {
+    background-image: url("../images/bg/flowerWithVase.jpg");
+    background-size: cover;
+    background-position: bottom;
+    height: 100%;
+
+    clip-path: polygon(0 0, 93% 0, 93% 40%, 50% 40%, 50% 100%, 0 100%);
+}
+
+.bg {
+    width: 160px;
+    height: 160px;
+}
+
+.g2 {
+    background-image: url("../images/product/pinky.jpg");
+    position: absolute;
+    background-size: contain;
+    right: 400px;
+    top: 240px;
+}
+
+.g3 {
+    background-image: url("../images/product/bluesea.jpg");
+    background-size: contain;
+    position: absolute;
+    right: 200px;
+    top: 240px;
+}
+
+.g4 {
+    background-image: url("../images/bg/bgEucalyptus.jpg");
+    background-size: 160%;
+
+    background-position: right;
+    position: absolute;
+    right: 0;
+    top: 240px;
+}
+.gnav{
+    position: absolute;
+    top: 50px;
+    right: 25px;
+}
+.gnav ul li{
+    width: 12px;
+    height: 12px;
+    background-color: var(--pri_rice);
+    margin-bottom: 20px;
+}
+.gnav ul li:last-child{
+    background-color: var(--pri_pink);
+}
+
+/* bread */
+.bread{
+    border-bottom: 1px solid var(--sub_brown);
+    margin-bottom: 40px;
+}
+.bread ul{
+    display: flex;
+    padding-bottom: 15px;
+}
+.bread ul li a{
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    margin-right: 30px;
+    color: var(--sub_brown);
+}
+.bread ul li:last-child a{
+    color: var(--pri_brown);
+}
+.bread ul li:not(:last-child) a::after{
+    content: "";
+    width: 1px;
+    height: 20px;
+    background-color: var(--sub_brown);
+    position: absolute;
+    right: -15px;
+    bottom: -1px;
+    transform: rotate(30deg);
+}
+
+/* product */
+.product ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.product ul li{
+    width: 280px;
+    margin: 0 20px;
+    margin-bottom: 40px;
+}
+
+.product ul li img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.product ul li p{
+    line-height: 30px;
+}
+.product ul li span{
+    color: var(--sub_brown);
+    display: inline-block;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.product ul li a {
+    display: block;
+    text-decoration: none;
+    color: var(--pri_brown);
+    font-family: 'Noto Serif TC', serif;
+}

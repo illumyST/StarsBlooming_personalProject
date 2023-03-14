@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            position: relative;
+            margin: 100px;
+        }
+
+        .out {
+            border: 10px solid green;
+            overflow-y: scroll;
+            width: 1280px;
+            height: 700px;
+            margin: 0 auto;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .bga1 {
+            border: 1px solid red;
+            height: 700px;
+            width: 1280px;
+            background-image: url("../Language\ of\ flowers.jpg");
+            overflow: auto;
+            background-attachment: fixed;
+        }
+
+        .bga2 {
+            border: 1px solid black;
+            height: 700px;
+            width: 1280px;
+            background-image: url("../Language\ of\ flowers2.jpg");
+            overflow: auto;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+
+
+        .bga3 {
+            border: 1px solid yellow;
+            height: 700px;
+            width: 1280px;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0);
+            background-attachment: fixed;
+        }
+
+        section {
+            border: 1px solid orange;
+            width: 350px;
+            position: absolute;
+            line-height: 3;
+            right: 200px;
+            top: 700px;
+            background-color: #F4F0EC;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out">
+        <div class="bga1"></div>
+        <div class="bga2">
+            <section>
+                <p>花語：<br>
+                    祝福、純潔、忠誠、真誠、尊重</p>
+                滿天星是小而美麗的花朵，因為其細小的體型和優美的形狀，<br>
+                且花色豐富，有白色、粉色、紫色和藍色等，<br>
+                為花束、插花和佈置帶來了獨特的視覺效果。
+            </section>
+        </div>
+        <div class="bga1"></div>
+        <div class="bga2"></div>
+    </div>
+</body>
+
+</html>

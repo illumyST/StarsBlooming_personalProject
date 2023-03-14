@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB flower language</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../css/flowerlanguage.css">
+</head>
+
+<body>
+    <header>
+        <img src="../images/ele/logoNav.svg" alt="logo">
+        <!-- <span></span> -->
+        <ul>
+            <li><a href="index.html">首 頁</a></li>
+            <li><a href="flowerlanguage.html">花 言 草 語</a></li>
+        </ul>
+    </header>
+    <main class="graphic">
+        <div class="g1 bg" id="forBtt">
+            <!-- <h2>滿天星</h2> -->
+        </div>
+        <div class="g2 bg"></div>
+        <div class="g2 bg">
+            <div class="g2text">
+                <span>花語</span>
+                <p>祝福、純潔、忠誠、真誠、尊重</p>
+                <span>特色</span>
+                <p>花色豐富且體型細小優美，為花束、插花和佈置帶來獨特的視覺效果</p>
+            </div>
+        </div>
+        <div class="bg"></div>
+        <div class="g3 bg">
+        </div>
+        <div class="g4 bg"></div>
+        <div class="g4 bg">
+            <h2>繡球花</h2>
+            <div class="g4text">
+                <span>花語</span><br><br>
+                <p>祝福、純潔、忠誠、真誠、尊重</p><br><br>
+                <span>特色</span><br><br>
+                <p>花朵呈球狀，繁花似錦的效果，<br>非常適合園藝種植</p>
+            </div>
+        </div>
+        <div class="g4 bg"></div>
+        <div class="g5 bg"></div>
+        <div class="g6 bg"></div>
+        <div class="g7 bg"></div>
+        <div class="g8 bg"></div>
+        <div class="g8 bg">
+            <div class="g8text">
+                <span>花語</span>
+                <p>平和、潔淨、自由、健康、希望</p><br><br>
+                <span>特色</span>
+                <p>是擁有強烈香氣的常綠植物，<br>可為花束增添清新感</p>
+            </div>
+        </div>
+        <div class="g8-1 bg"></div>
+        <!-- <div class="g7 bg"></div> -->
+        <div class="bg"></div>
+        <div class="g9 bg"></div>
+        <div class="g10 bg"></div>
+        <div class="g11 bg"></div>
+        <div class="g12 bg"></div>
+        <div class="g13 bg"></div>
+        <div class="g13 bg">
+            <h2>桃滿天星耳環</h2>
+        </div>
+        <div class="g14 bg"></div>
+        <div class="g15 bg"></div>
+        <div class="g16 bg">
+            <!-- btt btn -->
+            <a href="#" class="btt" target="_self"><img src="../images/ele/btt.svg" alt=""></a>
+        </div>
+    </main>
+
+
+    
+    <!-- btt script -->
+    <script>
+        //返回時長 0.6秒
+        $(".btt").click(function (e) {
+            e.preventDefault();
+            $("main").animate(
+                {
+                    scrollTop:0,
+                },
+                3000
+            );
+        });
+    </script>
+</body>
+
+</html>

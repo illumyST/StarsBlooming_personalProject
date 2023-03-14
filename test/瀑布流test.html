@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 1000px;
+            height: 1000px;
+            margin: 0 auto;
+            background-color: rgb(236, 227, 214);
+        }
+
+        ul {
+            height: 100%;
+            border: 1px solid red;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            /* align-content: space-between; */
+        }
+
+        li {
+            border: 1px solid red;
+            padding: 10px;
+            background-color: #fff;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 100%;
+
+        }
+
+        main {
+            width: 100%;
+            height: 200px;
+            background-image: url("mid-term/谷精草.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+
+            position: relative;
+
+            animation: test2 4s ease 5s infinite;
+        }
+
+        @keyframes test2 {
+            50% {
+                background-image: url("mid-term/虞美人.jpg");
+            }
+
+            100% {
+                background-image: url("mid-term/谷精草.jpg");
+            }
+        }
+
+        main::before {
+            content: "";
+            width: 0%;
+            height: 100%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            position: absolute;
+            left: 0;
+            top: 0;
+            /* animation: test 4s ease 5s infinite; */
+        }
+
+        @keyframes test2 {
+            100% {
+                width: 100%;
+            }
+        }
+
+        section {
+            position: relative;
+        }
+
+        section::before {
+            content: "";
+            width: 0%;
+            height: 100%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: test 2s ease 2s 10;
+        }
+
+        @keyframes test {
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                <section><img src="./mid-term/春系耳環.jpg" alt=""></section>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis necessitatibus illo temporibus
+                    fugiat voluptate numquam vel voluptatem. Veritatis necessitatibus illo temporibus
+                    fugiat voluptate numquam vel voluptatem. Veritatis necessitatibus illo temporibus
+                    fugiat voluptate numquam vel voluptatem</p>
+            </li>
+            <li>
+                <main></main>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis necessitatibus illo temporibus
+                    fugiat voluptate numquam vel voluptatem</p>
+            </li>
+            <li>
+                <img src="./mid-term/谷精草.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis necessitatibus illo temporibus
+                    fugiat voluptate numquam vel voluptatem</p>
+            </li>
+            <li>
+                <img src="./mid-term/春系耳環.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </li>
+            <li>
+                <img src="./mid-term/春系耳環.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis necessitatibus</p>
+            </li>
+            <li>
+                <img src="./mid-term/虎眼卡斯.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis necessitatibus illo temporibus
+                    fugiat voluptate numquam vel voluptatem</p>
+            </li>
+            <li>
+                <img src="./mid-term/自然系.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis necessitatibus illo temporibus
+                    fugiat voluptate numquam vel voluptatem. Veritatis necessitatibus illo temporibus
+                    fugiat voluptate numquam vel voluptatem</p>
+            </li>
+            <li>
+                <img src="./mid-term/春系耳環.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis necessitatibus illo temporibus
+                    fugiat voluptate numquam vel voluptatem. Veritatis necessitatibus illo temporibus
+                    fugiat voluptate numquam vel voluptatem. Veritatis necessitatibus illo temporibus
+                    fugiat voluptate numquam vel voluptatem</p>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
