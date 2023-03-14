@@ -133,22 +133,19 @@
 
 
     <!-- btt btn -->
-    <a href="#" class="btt"><img src="../images/ele/btt.svg" alt=""></a>
+    <a href="#" class="btt hide"><img src="../images/ele/btt.svg" alt=""></a>
 
     <!-- footer -->
     <!-- <div class="footer"></div> -->
 
     <!-- btt script -->
     <script>
-        // 區塊的最上方距離 document 最上方有多遠
-        const linkScroll = $(".navbtt").offset().top;
-
         //返回時長 0.6秒
         $(".btt").click(function (e) {
             e.preventDefault();
             $("html,body").animate(
                 {
-                    scrollTop: linkScroll,
+                    scrollTop: 0,
                 },
                 600
             );
@@ -156,7 +153,7 @@
 
         //優化 – 離頂點超過 ?px 時，才出現 btt
         $(window).scroll(function () {
-            if ($(window).scrollTop() > (linkScroll)) {
+            if ($(window).scrollTop() > (300)) {
                 if ($(".btt").hasClass("hide")) {
                     $(".btt").toggleClass("hide");
                 }
