@@ -7,27 +7,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div {
+        .out {
             margin: 0 auto;
-            border: 1px solid red;
+            /* border: 1px solid red; */
             width: 1200px;
-            height: 500px;
-            display: grid;
-            grid-template-rows: repeat(1, 500px);
-            grid-template-columns: repeat(12, auto);
-            column-gap: 20px;
+            height: 360px;
+            display: flex;
+        }
+
+        section.bg {
+            height: 100%;
+            flex-basis: 0;
+            flex-grow: 1;
+            background-color: rgb(174, 219, 204);
+            transition: 1.5s;
+            overflow: hidden;
+        }
+
+        .text {
+            /* border: 1px solid red; */
+            width: 100%;
+            padding-left: 22px;
+        }
+        
+        h2 {
+            padding-top: 30px;
+            writing-mode: vertical-lr;
+            margin: 0;
+        }
+
+        p {
+            display: none;
+        }
+
+        div section:not(:last-child) {
+            margin-right: 20px;
+        }
+        div:not(:hover) section:first-child {
+            flex-basis: 600px;
+            background-image: url("../images/number/1.png");
+            background-repeat: no-repeat;
+            background-size: 23%;
+        }
+        div:not(:hover) section:first-child .text {
+            margin: 120px 0 0 180px;
+        }
+        div:not(:hover) section:first-child .text h2{
+            writing-mode: horizontal-tb;
+        }
+        div:not(:hover) section:first-child .text p{
+            display: block;
+        }
+
+        div section:hover {
+
+            flex-basis: 600px;
+
+            background-image: url("../images/number/1.png");
+            background-repeat: no-repeat;
+            background-size: 23%;
+        }
+
+        div section:hover h2 {
+            writing-mode: horizontal-tb;
+        }
+
+        div section:hover p{
+            display: block;
+        }
+
+        div section:hover .text {
+            /* display: inline-block; */
+            margin: 120px 0 0 180px;
         }
     </style>
 </head>
 
 <body>
-    <div>
-        <section class="s1"></section>
-        <section class="s2"></section>
-        <section class="s3"></section>
-        <section class="s4"></section>
-        <section class="s5"></section>
-        <section class="s6"></section>
+    <div class="out">
+        <section class="s1 bg">
+            <div class="text">
+                <h2>避免陽光直射</h2>
+                <p>乾燥花易受陽光和熱的影響，<br>所以最好把它們存放在遠離陽光直射的地方，<br>例如櫥櫃或抽屜裡。</p>
+            </div>
+        </section>
+        <section class="s2 bg">
+            <div class="text">
+                <h2>避免陽光直射</h2>
+                <p>乾燥花易受陽光和熱的影響，<br>所以最好把它們存放在遠離陽光直射的地方，<br>例如櫥櫃或抽屜裡。</p>
+            </div>
+        </section>
+        <section class="s3 bg">
+            <div class="text">
+                <h2>避免陽光直射</h2>
+                <p>乾燥花易受陽光和熱的影響，<br>所以最好把它們存放在遠離陽光直射的地方，<br>例如櫥櫃或抽屜裡。</p>
+            </div>
+        </section>
+        <section class="s4 bg">
+            <div class="text">
+                <h2>避免陽光直射</h2>
+                <p>乾燥花易受陽光和熱的影響，<br>所以最好把它們存放在遠離陽光直射的地方，<br>例如櫥櫃或抽屜裡。</p>
+            </div>
+        </section>
+        <section class="s5 bg">
+            <div class="text">
+                <h2>避免陽光直射</h2>
+                <p>乾燥花易受陽光和熱的影響，<br>所以最好把它們存放在遠離陽光直射的地方，<br>例如櫥櫃或抽屜裡。</p>
+            </div>
+        </section>
+        <section class="s6 bg">
+            <div class="text">
+                <h2>避免陽光直射</h2>
+                <p>乾燥花易受陽光和熱的影響，<br>所以最好把它們存放在遠離陽光直射的地方，<br>例如櫥櫃或抽屜裡。</p>
+            </div>
+        </section>
     </div>
 </body>
 

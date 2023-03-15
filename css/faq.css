@@ -46,20 +46,184 @@ header ul li:last-child a {
 
 
 /* header - text */
-header .header_text{
+header .header_text {
     width: 900px;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 70%);
 
 }
-header .header_text p{
+
+header .header_text p {
     text-align: center;
     font-size: 16px;
     letter-spacing: auto;
     line-height: 30px;
     padding: 50px;
-    
+
     background-color: var(--pri_bg);
 
+}
+
+/* main_text */
+.main_text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main_text h2 {
+    margin-bottom: 10px;
+}
+
+/* showOut */
+.showOut {
+    display: flex;
+    height: 360px;
+    margin-bottom: 160px;
+}
+
+.showOut .bg{
+    flex-basis: 0;
+    flex-grow: 1;
+    background-color: var(--pri_rice);
+    transition: 1.5s;
+    overflow: hidden;
+
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+}
+
+.showOut .text {
+    /* border: 1px solid red; */
+    width: 100%;
+    padding-left: 22px;
+}
+
+.showOut h3{
+    font-size: 20px;
+    font-family: 'Kaisei Decol', serif;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0.1em;
+
+    padding-top: 30px;
+    writing-mode: vertical-lr;
+    margin: 0;
+}
+.showOut p{
+    display: none;
+}
+.showOut li:not(:last-child){
+    margin-right: 20px;
+}
+
+/* first child */
+.showOut:not(:hover) .s1{
+    flex-basis: 600px;
+
+    background-image: url("../images/number/1.png"), url("../images/bg/faqTexture.png");
+}
+.showOut:not(:hover) .s1 .text{
+    margin: 90px 0 0 180px;
+}
+.showOut:not(:hover) .s1 .text h3{
+    writing-mode: horizontal-tb;
+    margin-bottom: 10px;
+}
+.showOut:not(:hover) .s1 .text p{
+    display: block;
+}
+
+/* hover */
+.showOut li:hover{
+    flex-basis: 600px;
+}
+.showOut .s1:hover{
+    background-image: url("../images/number/1.png"), url("../images/bg/faqTexture.png");
+}
+.showOut .s2:hover {
+    background-image: url("../images/number/2.png"), url("../images/bg/faqTexture.png");
+}
+.showOut .s3:hover {
+    background-image: url("../images/number/3.png"), url("../images/bg/faqTexture.png");
+}
+.showOut .s4:hover {
+    background-image: url("../images/number/4.png"), url("../images/bg/faqTexture.png");
+}
+.showOut .s5:hover {
+    background-image: url("../images/number/5.png"), url("../images/bg/faqTexture.png");
+}
+.showOut .s6:hover {
+    background-image: url("../images/number/6.png"), url("../images/bg/faqTexture.png");
+}
+.showOut li:hover .text{
+    margin: 90px 0 0 180px;
+}
+.showOut li:hover .text h3{
+    writing-mode: horizontal-tb;
+    margin-bottom: 10px;
+}
+.showOut li:hover p{
+    display: block;
+}
+
+.showOut2 .bg{
+    background-color: var(--pri_green);
+}
+
+/* faq */
+.faq {
+    /* border: 1px solid black; */
+    width: 900px;
+    margin: 0 auto;
+    margin-bottom: 160px;
+}
+.faq h3{
+    font-size: 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0.1em;
+
+}
+.faq li{
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.faq li h3{
+    box-sizing: border-box;
+    padding: 8px 16px;
+    background-color: var(--pri_rice);
+    position: relative;
+}
+
+.faq li:nth-child(odd) h3{
+    background-color: var(--pri_green);
+}
+.faq li p{
+    display: none;
+    padding:10px 60px;
+    background-color: var(--pri_bg);
+}
+.faq li h3::after{
+    content: "";
+    width: 2px;
+    height: 20px;
+    background-color: var(--pri_brown);
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .2s;
+}
+
+.faq li h3::before{
+    content: "";
+    height: 2px;
+    width: 20px;
+    background-color: var(--pri_brown);
+    position: absolute;
+    right: 21px;
+    top: 50%;
+    transform: translateY(-50%);
 }

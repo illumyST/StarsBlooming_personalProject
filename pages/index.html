@@ -224,11 +224,11 @@
     <!-- btt script -->
     <script>
         // 區塊的最上方距離 document 最上方有多遠
-        const linkScroll = $(".navbtt").offset().top;
 
         //返回時長 0.6秒
         $(".btt").click(function (e) {
             e.preventDefault();
+            const linkScroll = $("main").offset().top;
             $("html,body").animate(
                 {
                     scrollTop: linkScroll,
@@ -239,6 +239,7 @@
 
         //優化 – 離頂點超過 ?px 時，才出現 btt
         $(window).scroll(function () {
+            const linkScroll = $("main").offset().top;
             if ($(window).scrollTop() > (linkScroll)) {
                 if ($(".btt").hasClass("hide")) {
                     $(".btt").toggleClass("hide");
