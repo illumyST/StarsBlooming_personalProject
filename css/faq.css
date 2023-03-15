@@ -1,3 +1,65 @@
 /* default */
 @import url("reset.css");
 @import url("default.css");
+
+header {
+    position: relative;
+    background-color: #ffe8db69;
+    background-blend-mode: screen;
+    background-image: url("../images/bg/faq.jpg");
+    padding: 140px 0 200px;
+    margin-bottom: 180px;
+}
+
+/* header - h1 */
+.title {
+    margin-bottom: 40px;
+}
+
+
+/* header - ul */
+header ul {
+    margin: 0 auto;
+    padding-right: 20px;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul li {
+    flex-grow: 1;
+}
+
+header ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    color: var(--pri_brown);
+}
+
+header ul li:last-child a {
+    text-align: right;
+    border-left: 1px solid var(--pri_brown);
+}
+
+
+/* header - text */
+header .header_text{
+    width: 900px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 70%);
+
+}
+header .header_text p{
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: auto;
+    line-height: 30px;
+    padding: 50px;
+    
+    background-color: var(--pri_bg);
+
+}
