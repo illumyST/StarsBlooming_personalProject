@@ -1,3 +1,189 @@
 /* default */
 @import url("reset.css");
 @import url("default.css");
+
+header{
+    margin-bottom: 80px;
+}
+
+main.container{
+    border: 1px solid var(--pri_brown);
+    height: 520px;
+    display: flex;
+    margin-bottom: 160px;
+}
+
+/* 左右配置 */
+main .left{
+    background-image: url("../images/bg/whiteVase.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+    flex-grow: 2;
+    clip-path: circle(92% at 0% 50%);
+}
+
+main .left h1{
+    display: inline-block;
+    padding: 50px 0 0 60px;
+    box-sizing: border-box;
+    line-height: 60px;
+    letter-spacing: .2em;
+}
+
+main .right{
+    flex-grow: 3;
+    padding: 50px 120px 50px 100px ;
+    box-sizing: border-box;
+}
+
+/* tab list */
+.tab_list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: relative;
+}
+.tab_list::after{
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--pri_brown);
+    position: absolute;
+    bottom: 30px;
+    left: 13px;
+    transform: scaleY(100%);
+    transition: .3s;
+}
+.tab_list.-right::after{
+    /* animation: tranTab .4s ease 1 forwards; */
+    left: 373px;
+    transform: scaleY(100%);
+}
+/* @keyframes tranTab{
+    50%{
+        transform: scaleX(200%);
+    }
+    100%{
+        transform: scaleY(100%);
+        
+    }
+} */
+
+
+.tab_list li a{
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: .6em;
+    color: var(--sub_brown);
+    margin-bottom: 40px;
+}
+.tab_list li a.-on{
+    color: var(--pri_brown);
+}
+
+/* button */
+.tab_content div{
+    text-align: right;
+} 
+.tab_content .logIn div{
+    margin-top: 30px;
+} 
+.tab_content button{
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 600;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.tab_content .logIn div a{
+    text-decoration: none;
+    color: var(--pri_brown);
+    font-size: 16px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: normal;
+    padding-right: 50px;
+    position: relative;
+}
+.tab_content .logIn div a::after{
+    content: "";
+    width: 1px;
+    height: 24px;
+    background-color: var(--pri_brown);
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* input */
+.tab_content input{
+    position: relative;
+    font-size: 16px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: normal;
+
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 12px;
+
+    box-sizing: border-box;
+    border: 1px solid var(--pri_brown);
+
+    padding-left: 40px;
+}
+/* input - focus */
+.tab_content input:focus{
+    outline: none;
+    box-shadow: 2px 2px 5px var(--pri_green);
+}
+.tab_contenttab_content input::placeholder {
+    color: var(--pri_green);
+}
+.tab_content .intext{
+    position: relative;
+}
+.tab_content .intext::before {
+    content: "\f007";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 16px;
+    color: var(--pri_green);
+    position: absolute;
+    left: 18px;
+    top: calc(50% - 3px);
+    transform: translateY(calc(-50%));
+    z-index: 2;
+}
+
+/* icon */
+.tab_content .intext[for="mail"]::before{
+    content: "\f0e0";
+}
+.tab_content .intext[for="reMail"]::before{
+    content: "\f0e0";
+}
+.tab_content .intext[for="password"]::before{
+    content: "\f023";
+}
+.tab_content .intext[for="rePassword"]::before{
+    content: "\f023";
+}
+.tab_content .intext[for="reChPassword"]::before{
+    content: "\f023";
+}
+
+
+/* tab toggle */
+div.tab_container div.tab_content form.tab{
+    padding: 10px;
+    display: none;
+}
+div.tab_container div.tab_content form.tab.-on{
+    display: block;
+}

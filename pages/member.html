@@ -32,10 +32,77 @@
     <header class="nav"></header>
 
     <!-- content -->
-    <div></div>
+    <main class="container">
+        <div class="left">
+            <h1>Welcome<br>星好友</h1>
+        </div>
+        <div class="right tab_container">
+            <div class="tab_list_block">
+                <ul class="tab_list">
+                    <li><a href="#" data-target="logIn" class="tab -on">登入</a>
+                    </li>
+                    <li><a href="#" data-target="signUp" class="tab">註冊</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_content">
+                <form class="tab logIn -on">
+                    <label class="intext" for="mail">
+                        <input type="text" id="Mail" onfocus="this.placeholder=''" onblur="this.placeholder='電子郵件'"
+                            placeholder="電子郵件">
+                    </label><br>
+                    <label class="intext" for="password">
+                        <input type="password" id="password" onfocus="this.placeholder=''"
+                            onblur="this.placeholder='密碼（英數字混合、至少一個大寫字母）'" placeholder="密碼（英數字混合、至少一個大寫字母）">
+                    </label><br>
+                    <div>
+                        <a href="#">忘記密碼</a><button type="submit" class="btn">登入</button>
+                    </div>
+                </form>
+                <form class="tab signUp">
+                    <label class="intext" for="name">
+                        <input type="text" id="name" onfocus="this.placeholder=''" onblur="this.placeholder='姓名'"
+                            placeholder="姓名">
+                    </label><br>
+                    <label class="intext" for="reMail">
+                        <input type="text" id="reMail" onfocus="this.placeholder=''" onblur="this.placeholder='電子郵件'"
+                            placeholder="電子郵件">
+                    </label><br>
+                    <label class="intext" for="rePassword">
+                        <input type="password" id="rePassword" onfocus="this.placeholder=''"
+                            onblur="this.placeholder='密碼（英數字混合、至少一個大寫字母）'" placeholder="密碼（英數字混合、至少一個大寫字母）">
+                    </label><br>
+                    <label class="intext" for="reChPassword">
+                        <input type="password" id="reChPassword" onfocus="this.placeholder=''"
+                            onblur="this.placeholder='確認密碼'" placeholder="確認密碼">
+                    </label><br>
+                    <div>
+                        <button type="submit" class="btn">註冊</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
 
     <!-- footer -->
     <div class="footer"></div>
+
+    <!-- tab script -->
+    <script>
+        $("a.tab").on("click", function (e) {
+            e.preventDefault();
+            
+            $(".tab_list").toggleClass("-right");
+
+            $(this).closest("ul").find("a.tab").removeClass("-on");
+            $(this).addClass("-on");
+
+            var el = $(this).closest("div.tab_container");
+
+            $(el).find("form.tab").removeClass("-on");
+            $(el).find("form.tab." + $(this).attr("data-target")).addClass("-on");
+        });
+    </script>
 
     <!-- default html – header / footer -->
     <script>
