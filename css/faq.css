@@ -227,3 +227,7 @@ header .header_text p {
     top: 50%;
     transform: translateY(-50%);
 }
+
+.faq li h3.-open::after{
+    transform: translateY(-50%) rotate(90deg);
+}

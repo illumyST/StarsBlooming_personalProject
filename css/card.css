@@ -1,3 +1,266 @@
 /* default */
 @import url("reset.css");
 @import url("default.css");
+
+
+.title {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.title+p {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* 進度條 */
+.progress {
+    height: 80px;
+    width: 10px;
+    background-color: var(--pri_green);
+    margin-left: auto;
+    position: fixed;
+    right: 140px;
+    top: 120px;
+    z-index: 90;
+}
+form{
+    margin-bottom: 160px;
+}
+
+main {
+    background-color: var(--pri_rice);
+    margin-bottom: 80px;
+}
+
+.wrapper {
+    padding: 50px 0;
+    display: flex;
+}
+
+.wrapper h2,
+.wrapper .check,
+.below h2{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Noto Serif TC', serif;
+    margin-bottom: 10px;
+    padding-left: 7px;
+}
+
+.wrapper .left,
+.wrapper .right {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* left */
+.wrapper .left {
+    margin: 0 70px 0 50px;
+}
+
+.wrapper input[type="text"],
+.wrapper textarea,
+.wrapper .left button {
+    position: relative;
+    font-size: 16px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: normal;
+
+    height: 40px;
+    width: 480px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+
+    box-sizing: border-box;
+    border: 1px solid var(--pri_brown);
+
+    padding-left: 40px;
+}
+
+.wrapper input[type="text"]::placeholder {
+    color: var(--pri_green);
+}
+.wrapper .intext{
+    position: relative;
+}
+.wrapper .intext::before {
+    content: "\f007";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 16px;
+    color: var(--pri_green);
+    position: absolute;
+    left: 18px;
+    top: calc(50% - 6px );
+    transform: translateY(calc(-50%));
+    z-index: 2;
+}
+
+/* icon */
+.wrapper .intext[for="location"]::before {
+    content: "\f3c5";
+}
+.wrapper .intext[for="reLocation"]::before {
+    content: "\f3c5";
+}
+.wrapper .intext[for="reMail"]::before {
+    content: "\f0e0";
+}
+
+
+.wrapper .left button {
+    cursor: pointer;
+    font-weight: 600;
+    width: 100px;
+    padding-left: 0px;
+    margin-bottom: 40px;
+    color: var(--pri_brown);
+    margin-left: auto;
+}
+
+/* right */
+.wrapper textarea {
+    height: 310px;
+    padding: 10px 0 0 20px;
+    color: var(--pri_green);
+}
+
+.wrapper input[type="checkbox"] {
+    position: relative;
+    left: -9999px;
+}
+
+.wrapper .check {
+    border-radius: 12px;
+    height: 50px;
+    line-height: 48px;
+    margin-top: -2px; /* 視覺上對齊 */
+    margin-bottom: 22px;
+    background-color: var(--pri_green);
+
+    padding-left: 54px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.wrapper .check::after {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    border-radius: 4px;
+    left: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .2s;
+}
+
+.wrapper .check::before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 4px;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .2s;
+}
+
+.wrapper input[type="checkbox"]:checked+.check::before {
+    background-color: var(--pri_brown);
+}
+
+.wrapper input[type="checkbox"]:checked+.check::after {
+    color: var(--pri_green);
+}
+
+/* focus */
+input:focus, textarea:focus{
+   outline: none;
+   box-shadow: 2px 2px 5px var(--pri_green);
+}
+
+/* below */
+.below{
+    padding-left:105px;
+    margin-bottom: 80px;
+}
+.below h2{
+    margin-bottom: 14px;
+}
+.imgOut{
+    display: flex;
+}
+
+.below .imgContainer{
+    border-radius: 5px;
+    width: 73%;
+    height: 530px;
+    margin-right: 28px;
+    background-image: url("../images/bg/letter.jpg");
+    background-size: 110%;
+    background-position: center left;
+    position: relative;
+}
+.below .imgContainer img{
+    height: 70%;
+    position: absolute;
+    left: 165px;
+    top: 50px;
+}
+.below .imgContainer p{
+    /* border: 1px solid red; */
+    width: 28%;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 110px;
+    margin-left:360px;
+}
+/* flower */
+.below .imgOut .fl{
+    cursor: pointer;
+    background-color: #fff;
+    width: 120px;
+    height: 170px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 1px solid var(--pri_brown);
+    margin-bottom: 10px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.below .imgOut .f1{
+    background-size: 60%;
+    background-image: url("../images/ele/card_f1.png");
+}
+.below .imgOut .f2{
+    background-size: 45%;
+    background-image: url("../images/ele/card_f2.png");
+}
+.below .imgOut .f3{
+    background-size: 50%;
+    background-image: url("../images/ele/card_f3.png");
+}
+
+/* last */
+.last{
+    text-align: center;
+    
+}
+.last h2{
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 500;
+    color: var(--pri_pink);
+    margin-bottom: 40px;
+}
+.last .btn{
+    cursor: ｀;
+    background-color: #fff;
+    font-family: 'Noto Serif TC', serif;
+}

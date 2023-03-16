@@ -177,13 +177,14 @@
     <div class="footer"></div>
 
     <!-- faq script -->
+
     <script>
         $(function () {
             $(".faq>ul>li").click(function () {
                 $(this).find('p').slideToggle("slow");
                 //QQQ
-                $(this).find('h3').append("<style>.faq li h3::after{transform: translateY(-50%) rotate(90deg); }</style>")
 
+                $(this).find('h3').toggleClass('-open');
             });
         });
     </script>

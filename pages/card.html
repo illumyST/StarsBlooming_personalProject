@@ -29,16 +29,95 @@
 
 <body>
     <!-- nav -->
-    <div class="nav navbtt"></div>
+    <header class="nav navbtt"></header>
 
     <!-- content -->
-    <div></div>
+    <h1 class="h1_sub title">探索星品</h1>
+    <p>這份卡片不僅僅是一張紙片，而是一份情感的傳達。<br>透過設計精美的卡片，將您撰寫下的心意百分百傳達到他 / 她手中吧！</p>
+
+    <div class="progress"></div>
+    <form action="#">
+        <main>
+            <div class="wrapper container">
+                <div class="left">
+                    <h2>寄件人資訊</h2>
+                    <label class="intext" for="sendName">
+                        <input type="text" id="sendName" onfocus="this.placeholder=''" onblur="this.placeholder='寄件人姓名'"
+                            placeholder="寄件人姓名">
+                    </label>
+                    <label class="intext" for="location">
+                        <input type="text" id="location" onfocus="this.placeholder=''"
+                            onblur="this.placeholder='您現在的地點'" placeholder="您現在的地點">
+                    </label>
+                    <button>自動定位</button>
+
+                    <h2>收件人資訊</h2>
+                    <label class="intext" for="reName">
+                        <input type="text" id="reName" onfocus="this.placeholder=''" onblur="this.placeholder='收件人姓名'"
+                            placeholder="收件人姓名">
+                    </label>
+                    <label class="intext" for="reLocation">
+                        <input type="text" id="reLocation" onfocus="this.placeholder=''"
+                            onblur="this.placeholder='寄送地點'" placeholder="寄送地點">
+                    </label>
+                    <label class="intext" for="reMail">
+                        <input type="text" id="reMail" onfocus="this.placeholder=''" onblur="this.placeholder='電子郵件'"
+                            placeholder="電子郵件">
+                    </label>
+                </div>
+                <div class="right">
+                    <h2>傳情內容</h2>
+                    <textarea name="" id="textarea" onfocus="this.value=''"
+                        onblur=imgShow(event)>請輸入您的心意吧！建議文長100-200字唷！</textarea>
+
+                    <input type="checkbox" id="checkbox">
+                    <label class="check" for="checkbox"> 一併寄送電子版本卡片
+                    </label>
+                </div>
+            </div>
+        </main>
+        <div class="below container">
+            <h2>選擇花束種類</h2>
+            <div class="imgOut">
+                <div class="imgContainer">
+                    <img src="../images/ele/card_f1.png" alt="">
+                    <p id="imgP">
+                        你好嗎？我好愛你，希望你喜歡這份禮物。你好嗎？我好愛你，希望你喜歡這份禮物你好嗎？我好愛你，希望你喜歡這份禮物你好嗎？我好愛你，希望你喜歡這份禮物你好嗎？我好愛你，希望你喜歡這份禮物你好嗎？我好愛你，希望你喜歡這份禮物你好嗎？我好愛你，希望你喜歡這份禮物。你好嗎？我好愛你，希望你喜歡這份禮物你好嗎？
+                    </p>
+                </div>
+                <div class="flower">
+                    <button class="f1 fl"></button><br>
+                    <button class="f2 fl"></button><br>
+                    <button class="f3 fl"></button>
+                </div>
+            </div>
+        </div>
+        <div class="last container">
+            <h2>請確認上方預覽圖像後，送出表單並至購物車結帳<br>結帳後我們將於3日內寄出卡片</h2>
+            <button type="submit" class="btn">確認送出</button>
+        </div>
+    </form>
 
     <!-- btt btn -->
     <a href="#" class="btt hide"><img src="../images/ele/btt.svg" alt=""></a>
 
     <!-- footer -->
     <div class="footer"></div>
+
+    <!-- imgP script -->
+    <script>
+        let textarea = document.getElementById("textarea");
+        let imgP = document.getElementById("imgP");
+        function imgShow(event) {
+            if (!textarea.value) {
+                textarea.value = '請輸入您的心意吧！建議文長150-200字唷！';
+            } else {
+                imgP.innerText = textarea.value;
+            }
+            console.log(imgP.innerText)
+        }
+
+    </script>
 
     <!-- btt script -->
     <script>
