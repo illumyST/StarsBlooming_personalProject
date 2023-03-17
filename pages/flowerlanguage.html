@@ -35,7 +35,46 @@
             <li><a href="flowerlanguage.html">花 言 草 語</a></li>
         </ul>
     </header>
-    <nav></nav>
+
+    <!-- nav bar -->
+
+    <button class="bar">
+        <span></span>
+        <span></span>
+    </button>
+    <aside class="aside">
+        <nav class="navLan">
+            <ul>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="product.html">探索星品</a>
+                    <!-- <ol>
+                        <li><a href="product.html/#">春季星品</a></li>
+                        <li><a href="product.html/#">熱銷商品</a></li>
+                        <li><a href="product.html/#">乾燥花耳飾</a></li>
+                        <li><a href="card.html">花禮傳情</a></li>
+                        <li><a href="product.html/#">客製化商品</a></li>
+                    </ol> -->
+                </li>
+                <li><a href="faq.html">購物須知</a>
+                    <!-- <ol>
+                        <li><a href="faq.html/#">乾燥花保存</a></li>
+                        <li><a href="faq.html/#">退換貨政策</a></li>
+                        <li><a href="faq.html/#">常見問題</a></li>
+                    </ol> -->
+                </li>
+                <li><a href="flowerlanguage.html">花言草語</a></li>
+                <li>
+                    <a href="member.html"><i class="fa-solid fa-user"></i>會員登入</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i>購物車</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    
+
+    <!-- main -->
     <main class="graphic">
         <div class="g1 bg" id="forBtt">
             <!-- <h2>滿天星</h2> -->
@@ -95,7 +134,7 @@
     </main>
 
 
-    
+
     <!-- btt script -->
     <script>
         //返回時長 0.6秒
@@ -103,12 +142,13 @@
             e.preventDefault();
             $("main").animate(
                 {
-                    scrollTop:0,
+                    scrollTop: 0,
                 },
                 3000
             );
         });
     </script>
+    <script src="../js/flowerlanguage.js"></script>
 </body>
 
 </html>
