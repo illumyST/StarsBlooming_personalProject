@@ -15,15 +15,74 @@
 
 /* 進度條 */
 .progress {
-    height: 80px;
-    width: 10px;
-    background-color: var(--pri_green);
+    /* height: 80px; */
+    
     margin-left: auto;
     position: fixed;
-    right: 140px;
-    top: 120px;
+    right: 120px;
+    top: 30vh;
     z-index: 90;
+    opacity: 1;
+
+    transition: .2s;
 }
+
+.progressHide{
+    opacity: 0;
+}
+.progress ul{
+    /* border: 1px solid blue; */
+    display: inline-block;
+    margin: 0 auto;
+    counter-reset:num;
+    position: relative;
+}
+
+.progress ul::before{
+    content: "";
+    height: 100%;
+    width: 3px;
+    background-color: var(--pri_bg);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -2;
+}
+
+.progress ul::after{
+    content: "";
+    height: 0%;
+    width: 3px;
+    background-color: var(--pri_green);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%);
+}
+
+.progress ul li{
+    font-family: 'Noto Serif TC', serif;
+    font-size: 16px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--pri_bg);
+    border: 1px solid var(--pri_green);
+    position: relative;
+}
+.progress ul li:not(:last-child){
+    margin-bottom: 100px;
+}
+.progress ul li::before{
+    counter-increment:num;
+    content: counter(num);
+    position: absolute;
+    left: 50%;
+    top: 45%; /* 視覺對齊 */
+    transform: translate(-50%,-50%);
+}
+
 form{
     margin-bottom: 160px;
 }

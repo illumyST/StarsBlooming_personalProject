@@ -285,11 +285,111 @@
     margin-bottom: 40px;
 }
 
-.product ul li img {
-    width: 100%;
-    margin-bottom: 10px;
+/* img */
+.product ul li .img {
+    border-radius: 3px;
+    padding-bottom: 100%;
+    background-size: cover;
+    transition: .3s;
 }
 
+.product ul li .m1 {
+    background-image: url("../images/product/eucalyptus.jpg");
+}
+
+.product ul li:hover .m1 {
+    background-image: url("../images/product/eucalyptusDemo.jpg");
+}
+
+.product ul li .m2 {
+    background-image: url("../images/product/elf.jpg");
+}
+
+.product ul li:hover .m2 {
+    background-image: url("../images/product/elfDemo2.jpg");
+}
+
+.product ul li .m3 {
+    background-image: url("../images/product/bluesea.jpg");
+}
+
+.product ul li:hover .m3 {
+    background-image: url("../images/product/blueseaDemo.jpg");
+}
+
+.product ul li .m4 {
+    background-image: url("../images/product/pearlpink.jpg");
+}
+
+.product ul li:hover .m4 {
+    background-image: url("../images/product/Demo.jpg");
+}
+
+.product ul li .m5 {
+    background-image: url("../images/product/tiger.jpg");
+}
+
+.product ul li:hover .m5 {
+    background-image: url("../images/product/blueseaDemo.jpg");
+}
+
+.product ul li .m6 {
+    background-image: url("../images/product/pinky.jpg");
+}
+
+.product ul li:hover .m6 {
+    background-image: url("../images/product/Demo2.jpg");
+}
+
+.product ul li .m7 {
+    background-image: url("../images/product/nature.jpg");
+}
+
+.product ul li:hover .m7 {
+    background-image: url("../images/product/natureDemo.jpg");
+}
+
+.product ul li .m8 {
+    background-image: url("../images/product/nature.jpg");
+}
+
+.product ul li:hover .m8 {
+    background-image: url("../images/product/Demo.jpg");
+}
+
+/* btn */
+.product ul li button {
+    /* cursor:pointer;
+    pointer-events: auto; */
+    position: absolute;
+    top: 240px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+
+    width: 88%;
+    font-size: 20px;
+    font-family: 'Noto Serif TC', serif;
+    line-height: 40px;
+    color: var(--pri_brown);
+    letter-spacing: .3em;
+
+    background-color: #f4f0ecd5;
+    border: .5px solid var(--sub_brown);
+    border-radius: 6px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.product ul li:hover button {
+    top: 220px;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 字卡 */
 .product ul li p {
     line-height: 30px;
 }
@@ -302,10 +402,12 @@
 }
 
 .product ul li a {
+
     display: block;
     text-decoration: none;
     color: var(--pri_brown);
     font-family: 'Noto Serif TC', serif;
+    position: relative;
 }
 
 /* page */

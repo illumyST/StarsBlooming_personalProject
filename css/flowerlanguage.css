@@ -118,6 +118,10 @@ header ul li:first-child a::after {
     transform: rotate(30deg);
 
 }
+/* nav */
+nav{
+    position: absolute;
+}
 
 /* main */
 main {
@@ -125,7 +129,8 @@ main {
     height: 640px;
     margin: 0 auto;
     background-color: var(--pri_bg);
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {

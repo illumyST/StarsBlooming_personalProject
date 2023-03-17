@@ -231,6 +231,7 @@ footer .out {
 footer a {
     text-decoration: none;
     color: var(--pri_brown);
+    white-space: nowrap;
 }
 
 footer .left {
@@ -264,6 +265,11 @@ footer .right {
 
     margin-right: 20px;
     /* for btt */
+}
+footer .right a:hover ,
+footer .left a:hover
+{
+    color: var(--pri_pink);
 }
 
 footer .right,
