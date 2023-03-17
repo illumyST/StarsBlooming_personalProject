@@ -13,7 +13,8 @@
 }
 
 .bread ul li a,
-.page ul li a, .pagedots{
+.page ul li a,
+.pagedots {
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
@@ -22,17 +23,51 @@
 }
 
 .wrapper {
+    position: relative;
     margin-bottom: 160px;
     display: flex;
     justify-content: space-between;
 }
+
+.wrapper .circle {
+    font-size: 14px;
+    letter-spacing: .4em;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 150px;
+    top: -50px;
+    z-index: 20;
+    animation: cir 10s linear infinite;
+}
+
+@keyframes cir {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.wrapper .circle path {
+    fill: none;
+}
+
+.wrapper .circle svg {
+    display: block;
+    overflow: visible;
+}
+
+.wrapper .circle textPath {
+    fill: var(--sub_brown);
+}
+
+
 
 /* right */
 .wrapper .productArea {
     flex-basis: 960px;
 }
 
-/* left */
+/* left ------------------- */
 .wrapper .menu {
     background-color: var(--pri_green);
 
@@ -62,12 +97,14 @@
     letter-spacing: 0.3em;
     color: #fff;
 }
-.menu ol{
+
+.menu ol {
     display: none;
     transition: .2s;
     margin-bottom: 16px;
 }
-.menu ol li a{
+
+.menu ol li a {
     color: #ffedd5;
     font-size: 15px;
     line-height: 40px;
@@ -75,11 +112,12 @@
 }
 
 /* menu - ol */
-.menuOl input{
+.menuOl input {
     position: absolute;
     left: -9999px;
 }
-.menuOl label{
+
+.menuOl label {
     cursor: pointer;
     /* border: 1px solid rgb(0, 132, 88); */
     user-select: none;
@@ -95,15 +133,17 @@
     transform: rotate(225deg);
     transition: .2s;
 }
-.menuOl input[type="checkbox"]:checked ~ ol{
+
+.menuOl input[type="checkbox"]:checked~ol {
     display: block;
 }
-.menuOl input[type="checkbox"]:checked + label{
-    transform: rotate(45deg) ;
-    top:130px;
+
+.menuOl input[type="checkbox"]:checked+label {
+    transform: rotate(45deg);
+    top: 130px;
 }
 
-/* right */
+/* right ------------------ */
 
 .productArea .top {
     width: 100%;
@@ -111,6 +151,19 @@
     position: relative;
     margin-bottom: 60px;
 }
+
+.productArea .cover {
+    /* position: relative; */
+}
+
+/* .productArea .cover::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-color: #ffffff79;
+    position: absolute;
+    left: 0;
+} */
 
 .g1 h3 {
     color: #ffffffbc;
@@ -263,10 +316,12 @@
     display: flex;
     justify-content: space-between;
 }
-.pagedots{
+
+.pagedots {
     pointer-events: none;
 }
-.page ul li a{
+
+.page ul li a {
     text-align: center;
     line-height: 28px;
     display: block;
@@ -275,8 +330,8 @@
     border-radius: 50%;
     transition: .2s;
 }
-.page ul li:hover a{
+
+.page ul li:hover a {
     background-color: var(--pri_pink);
     color: #fff;
 }
-

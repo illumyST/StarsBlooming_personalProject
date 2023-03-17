@@ -87,6 +87,9 @@ p.vertical {
     bottom: 50px;
 
 }
+.name .vertical{
+    color: #fff;
+}
 
 .name .left {
     left: 300px;

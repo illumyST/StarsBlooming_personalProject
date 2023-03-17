@@ -10,14 +10,70 @@ header {
     background-repeat: no-repeat;
 
     box-sizing: border-box;
-    padding: 120px 240px 0;
+    padding: 20vh 19vw 0;
+    position: relative;
 
+}
+
+header svg {
+    width: 98vw;
+    position: absolute;
+    z-index: 20;
+    left: -160px;
+    top: -160px;
+    opacity: 0;
+
+    stroke-dasharray: 800;
+    stroke-dashoffset: 2000;
+    animation: dash 2.5s .5s linear none;
+}
+
+@keyframes dash {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        /* stroke-dasharray: 0; */
+        stroke-dashoffset: 0;
+    }
+}
+
+header img {
+    width: 34%;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    opacity: 0;
+    position: relative;
+
+    animation: himg 1s ease 2.2s forwards;
+
+}
+
+@keyframes himg {
+    0% {
+        position: absolute;
+        top: 50px;
+        opacity: 0;
+    }
+
+    100% {
+        position: absolute;
+        top: 10px;
+        opacity: 1;
+    }
 }
 
 header h1 {
     font-family: 'Noto Serif TC', serif;
     font-weight: 900;
-    font-size: 66px;
+    font-size: 68px;
     letter-spacing: 0.08em;
     margin-bottom: 100px;
 }
@@ -25,15 +81,47 @@ header h1 {
 header h1>p {
     font-family: 'Noto Serif TC', serif;
     font-weight: 900;
-    font-size: 42px;
+    font-size: 46px;
     letter-spacing: 0.06em;
     padding-bottom: 48px;
+    opacity: 0;
+    position: relative;
+    bottom: -40px;
+
+    animation: hh1 1s ease .4s forwards;
+}
+
+header h1>span {
+    opacity: 0;
+    position: relative;
+    bottom: -40px;
+    animation: hh1 1s ease 1.3s forwards;
 }
 
 header>p {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 28px;
     letter-spacing: 0.08em;
+
+    opacity: 0;
+    position: relative;
+    bottom: -40px;
+
+    animation: hp 1s ease 2.2s forwards;
+}
+
+@keyframes hh1 {
+    100% {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+@keyframes hp {
+    100% {
+        opacity: 1;
+        bottom: 0;
+    }
 }
 
 
@@ -48,9 +136,8 @@ main {
 }
 
 main .slider_container {
-    width: 60%;
-    height: 60%;
-    border: 1px solid red;
+    width: 900px;
+    height: 375px;
 
     position: absolute;
     left: 50%;
@@ -61,6 +148,7 @@ main .slider_container {
 }
 
 .slider_container img {
+    display: block;
     width: 100%;
 }
 
@@ -68,6 +156,39 @@ main .slider_container {
 .brand {
     text-align: center;
     margin-bottom: 160px;
+    position: relative;
+}
+
+.brand::after {
+    content: "";
+    width: 400px;
+    height: 800px;
+
+    background-image: url("../images/ele/leaves1.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 120px 0;
+
+    position: absolute;
+    right: 0px;
+    top: 200px;
+
+}
+
+.brand::before {
+    content: "";
+    width: 450px;
+    height: 800px;
+
+    background-image: url("../images/ele/leaves2.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: absolute;
+    left: -180px;
+    bottom: -80px;
+    z-index: -1;
+
 }
 
 .brand img {
@@ -103,6 +224,8 @@ main .slider_container {
 /* hot product - svg */
 .hot svg {
     position: absolute;
+    left: 0;
+    top: 0;
     pointer-events: none;
 }
 
@@ -164,17 +287,22 @@ main .slider_container {
 }
 
 .textContainer .btn::before {
+    content: "";
+    top: -3px;
+    /* for vertical center */
     color: var(--sub_green);
     background-color: rgb(255, 255, 255);
+    text-align: center;
+    visibility: hidden;
+    transition: .5s;
 }
 
 .textContainer .btn:hover::before {
+    visibility: visible;
     content: "GO";
+    color: var(--sub_green);
     position: absolute;
-    top: -3px;
-    /* for vertical center */
-    text-align: center;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 255, 255);
 }
 
 /* hot product - hots */
@@ -261,6 +389,49 @@ main .slider_container {
     margin-bottom: 160px;
 }
 
+.comment li {
+    opacity: .7;
+}
+
+.comment li:hover {
+    opacity: 1;
+}
+
+.comment .comTop {
+    transform: translateX(0);
+    animation: comTop 30s linear infinite;
+}
+
+.comment .comTop:hover,
+.comment .comDown:hover {
+    animation-play-state: paused;
+}
+
+@keyframes comTop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.comment .comDown {
+    transform: translateX(-50%);
+    animation: comDown 30s linear infinite;
+}
+
+@keyframes comDown {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
 .comment h1 {
     margin-bottom: 60px;
 }
@@ -279,7 +450,7 @@ main .slider_container {
     background-color: #fff;
     padding: 0 12px;
     border-radius: 12px;
-
+    white-space: nowrap;
     flex-shrink: 0;
 }
 
