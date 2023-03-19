@@ -16,7 +16,7 @@
 /* 進度條 */
 .progress {
     /* height: 80px; */
-    
+
     margin-left: auto;
     position: fixed;
     right: 120px;
@@ -27,18 +27,19 @@
     transition: .2s;
 }
 
-.progressHide{
+.progressHide {
     opacity: 0;
 }
-.progress ul{
+
+.progress ul {
     /* border: 1px solid blue; */
     display: inline-block;
     margin: 0 auto;
-    counter-reset:num;
+    counter-reset: num;
     position: relative;
 }
 
-.progress ul::before{
+.progress ul::before {
     content: "";
     height: 100%;
     width: 3px;
@@ -49,7 +50,7 @@
     z-index: -2;
 }
 
-.progress ul::after{
+.progress ul::after {
     content: "";
     height: 0%;
     width: 3px;
@@ -61,7 +62,7 @@
     transform: translate(-50%);
 }
 
-.progress ul li{
+.progress ul li {
     font-family: 'Noto Serif TC', serif;
     font-size: 16px;
     width: 25px;
@@ -71,19 +72,22 @@
     border: 1px solid var(--pri_green);
     position: relative;
 }
-.progress ul li:not(:last-child){
+
+.progress ul li:not(:last-child) {
     margin-bottom: 100px;
 }
-.progress ul li::before{
-    counter-increment:num;
+
+.progress ul li::before {
+    counter-increment: num;
     content: counter(num);
     position: absolute;
     left: 50%;
-    top: 45%; /* 視覺對齊 */
-    transform: translate(-50%,-50%);
+    top: 45%;
+    /* 視覺對齊 */
+    transform: translate(-50%, -50%);
 }
 
-form{
+form {
     margin-bottom: 160px;
 }
 
@@ -99,7 +103,7 @@ main {
 
 .wrapper h2,
 .wrapper .check,
-.below h2{
+.below h2 {
     font-size: 24px;
     font-weight: 600;
     font-family: 'Noto Serif TC', serif;
@@ -111,7 +115,7 @@ main {
 .wrapper .right {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 /* left */
@@ -141,9 +145,11 @@ main {
 .wrapper input[type="text"]::placeholder {
     color: var(--pri_green);
 }
-.wrapper .intext{
+
+.wrapper .intext {
     position: relative;
 }
+
 .wrapper .intext::before {
     content: "\f007";
     font-family: "Font Awesome 5 Free";
@@ -152,7 +158,7 @@ main {
     color: var(--pri_green);
     position: absolute;
     left: 18px;
-    top: calc(50% - 6px );
+    top: calc(50% - 6px);
     transform: translateY(calc(-50%));
     z-index: 2;
 }
@@ -161,9 +167,11 @@ main {
 .wrapper .intext[for="location"]::before {
     content: "\f3c5";
 }
+
 .wrapper .intext[for="reLocation"]::before {
     content: "\f3c5";
 }
+
 .wrapper .intext[for="reMail"]::before {
     content: "\f0e0";
 }
@@ -195,7 +203,8 @@ main {
     border-radius: 12px;
     height: 50px;
     line-height: 48px;
-    margin-top: -2px; /* 視覺上對齊 */
+    margin-top: -2px;
+    /* 視覺上對齊 */
     margin-bottom: 22px;
     background-color: var(--pri_green);
 
@@ -239,24 +248,27 @@ main {
 }
 
 /* focus */
-input:focus, textarea:focus{
-   outline: none;
-   box-shadow: 2px 2px 5px var(--pri_green);
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 2px 2px 5px var(--pri_green);
 }
 
 /* below */
-.below{
-    padding-left:105px;
+.below {
+    padding-left: 105px;
     margin-bottom: 80px;
 }
-.below h2{
+
+.below h2 {
     margin-bottom: 14px;
 }
-.imgOut{
+
+.imgOut {
     display: flex;
 }
 
-.below .imgContainer{
+.below .imgContainer {
     border-radius: 5px;
     width: 73%;
     height: 530px;
@@ -266,22 +278,25 @@ input:focus, textarea:focus{
     background-position: center left;
     position: relative;
 }
-.below .imgContainer img{
+
+.below .imgContainer img {
     height: 70%;
     position: absolute;
     left: 165px;
     top: 50px;
 }
-.below .imgContainer p{
+
+.below .imgContainer p {
     /* border: 1px solid red; */
     width: 28%;
     font-size: 14px;
     line-height: 24px;
     padding-top: 110px;
-    margin-left:360px;
+    margin-left: 360px;
 }
+
 /* flower */
-.below .imgOut .fl{
+.below .imgOut .fl {
     cursor: pointer;
     background-color: #fff;
     width: 120px;
@@ -294,32 +309,37 @@ input:focus, textarea:focus{
     background-repeat: no-repeat;
     background-position: center;
 }
-.below .imgOut .f1{
+
+.below .imgOut .f1 {
     background-size: 60%;
     background-image: url("../images/ele/card_f1.png");
 }
-.below .imgOut .f2{
+
+.below .imgOut .f2 {
     background-size: 45%;
     background-image: url("../images/ele/card_f2.png");
 }
-.below .imgOut .f3{
+
+.below .imgOut .f3 {
     background-size: 50%;
     background-image: url("../images/ele/card_f3.png");
 }
 
 /* last */
-.last{
+.last {
     text-align: center;
-    
+
 }
-.last h2{
+
+.last h2 {
     font-family: 'Noto Serif TC', serif;
     font-weight: 500;
     color: var(--pri_pink);
     margin-bottom: 40px;
 }
-.last .btn{
-    cursor: ｀;
+
+.last .btn {
+    cursor: pointer;
     background-color: #fff;
     font-family: 'Noto Serif TC', serif;
 }

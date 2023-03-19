@@ -62,8 +62,9 @@
 
 
 
-/* right */
+/* right ------------------ */
 .wrapper .productArea {
+    margin-left: 40px;
     flex-basis: 960px;
 }
 
@@ -77,9 +78,10 @@
     background-position: -20px 0px;
 
     flex-basis: 200px;
+    flex-grow: 1;
+    
     height: 450px;
     position: sticky;
-    left: 110px;
     top: 120px;
 
     text-align: center;
