@@ -47,32 +47,6 @@ p.vertical {
 }
 
 /* about satrs blooming */
-.about {
-    /* height: 800px; */
-    display: flex;
-    padding: 200px 100px 0;
-    box-sizing: border-box;
-    position: relative;
-    margin-bottom: 130px;
-}
-
-.about p.left {
-    left: 520px;
-    top: 120px;
-}
-
-.about p.right {
-    left: 610px;
-    top: 305px;
-}
-
-.about .text {
-    padding-top: 10px;
-}
-
-.about .text p {
-    margin-bottom: 40px;
-}
 
 /* our name */
 .name {
@@ -87,7 +61,8 @@ p.vertical {
     bottom: 50px;
 
 }
-.name .vertical{
+
+.name .vertical {
     color: #fff;
 }
 
@@ -140,6 +115,7 @@ p.vertical {
 .history {
     padding-bottom: 600px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .history h2 {
@@ -221,9 +197,77 @@ footer {
     height: 800px;
 
     background-image: url("../images/bg/aboutFooter.png");
-    background-position: center -300px;
+    background-repeat: no-repeat;
     z-index: -1;
-    background-size: 110%;
+    
     position: absolute;
     bottom: 0;
 }
+
+.about {
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 130px;
+}
+.about .text {
+    padding-top: 10px;
+}
+
+.about .text p {
+    margin-bottom: 40px;
+    white-space: nowrap;
+}
+
+
+@media screen and (max-width:1920px){
+    .footer::before{
+        height: 980px;
+        background-size: 100%;
+        background-position: center -320px;
+    }
+    .about {
+        padding: 300px 100px 0 360px;
+    }
+    .about p.left {
+        left: 800px;
+        top: 220px;
+    }
+    
+    .about p.right {
+        left: 890px;
+        top: 405px;
+    }
+}
+
+
+@media screen and (max-width:1440px){
+    .footer::before {
+        background-position: center -150px;
+        background-size: 110%;
+    }
+
+    .about {
+        padding: 200px 100px 0;
+    }
+    
+    .about p.left {
+        left: 520px;
+        top: 120px;
+    }
+    
+    .about p.right {
+        left: 610px;
+        top: 305px;
+    }
+}
+
+@media screen and (max-width:1280px){
+    .footer::before {
+        background-position: center -40px;
+        background-size: 110%;
+    }
+}
+
+
+

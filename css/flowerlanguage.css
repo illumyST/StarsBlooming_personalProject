@@ -99,12 +99,13 @@ button span:first-child {
 button span {
     display: inline-block;
     width: 50%;
-    height: 1px;
+    height: 1.5px;
     background-color: var(--pri_brown);
     position: absolute;
     top: 35px;
     right: 0;
     transition: .2s;
+    
 }
 
 button:hover span:last-child {
@@ -115,12 +116,16 @@ button:hover span:first-child {
     width: 65%;
 }
 button span.-on:first-child{
+    background-color: #fff;
     transform: rotate(-45deg);
     top: 30px;
+    width: 50%;
 }
 button span.-on:last-child{
+    background-color: #fff;
     transform: rotate(45deg);
     top: 30px;
+    width: 50%;
 }
 
 /* nav ----------------- */
@@ -191,7 +196,20 @@ main {
     overflow-y: scroll;
     overflow-x: hidden;
 }
-
+.bg span{
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    padding: 6px 8px 6px 12px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    letter-spacing: .2em;
+    background-color: var(--pri_pink);
+}
+.g4 span{
+    padding: 8px;
+}
 ::-webkit-scrollbar {
     display: none;
 }

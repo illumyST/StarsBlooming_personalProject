@@ -234,3 +234,133 @@ header .header_text p {
 .faq li h3.-open::after{
     transform: translateY(-50%) rotate(90deg);
 }
+
+/* deco */
+
+.header_text::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--pri_green);
+    position: absolute;
+    right: -60px;
+    bottom: -100px;
+    box-sizing: border-box;
+
+    animation: border 3s infinite;
+}
+
+.header_text::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--pri_green);
+    position: absolute;
+    right: -80px;
+    bottom: -120px;
+    animation: border2 3s 1.5s infinite;
+}
+#exchange{
+    position: relative;
+}
+#exchange::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--pri_green);
+    position: absolute;
+    left: 140px;
+    top: 30px;
+    box-sizing: border-box;
+
+    animation: border 3s infinite;
+}
+
+#exchange::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--pri_green);
+    position: absolute;
+    left: 80px;
+    top: -30px;
+    animation: border2 3s 1.5s infinite;
+}
+#faq{
+    position: relative;
+}
+#faq::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--pri_green);
+    position: absolute;
+    right: 120px;
+    top: -40px;
+    box-sizing: border-box;
+
+    animation: border 3s infinite;
+}
+
+#faq::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--pri_green);
+    position: absolute;
+    right: 110px;
+    top: -30px;
+    animation: border2 3s 1.5s infinite;
+}
+
+.footer{
+    position: relative;
+}
+.footer::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--pri_green);
+    position: absolute;
+    left: 80px;
+    top: -100px;
+    animation: border2 3s 1.5s infinite;
+}
+
+.footer::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--pri_green);
+    position: absolute;
+    left: 100px;
+    top: -120px;
+    box-sizing: border-box;
+
+    animation: border 3s infinite;
+}
+
+@keyframes border{
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes border2{
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(-180deg);
+    }
+    100%{
+        transform: rotate(-180deg);
+    }
+}
+
