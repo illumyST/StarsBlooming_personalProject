@@ -1,0 +1,14 @@
+/* default */
+@import url("reset.css");
+@import url("default.css");
+
+header{
+    margin-bottom: 80px;
+}
+
+main.container{
+    border: 1px solid var(--pri_brown);
+    height: 520px;
+    display: flex;
+    margin-bottom: 160px;
+}
