@@ -2,13 +2,380 @@
 @import url("reset.css");
 @import url("default.css");
 
-header{
-    margin-bottom: 80px;
+header {
+    margin-bottom: 40px;
 }
 
-main.container{
+main.container {
     border: 1px solid var(--pri_brown);
-    height: 520px;
+    height: 580px;
     display: flex;
-    margin-bottom: 160px;
+    margin-bottom: 60px;
+    background-image: linear-gradient(to right, var(--pri_bg)0% 30%, #fff 30% 100%);
+
+    padding: 45px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    position: relative;
+}
+
+main .imgs {
+    width: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 24px;
+}
+
+main .imgs li {
+    margin-top: 12px;
+    cursor: pointer;
+
+}
+
+main .imgs li:hover img {
+    opacity: .6;
+}
+
+main .imgs img {
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    opacity: 1;
+    transition: .3s;
+}
+
+/* ------- show -------- */
+main .orImg {
+    position: relative;
+    overflow: hidden;
+    margin-right: 50px;
+}
+
+main .orImg img,
+main .bigImg img {
+    height: 100%;
+    border-radius: 3px;
+}
+
+main .glass {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff70;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    z-index: 2;
+    pointer-events: none;
+
+    display: none;
+}
+
+main .bigImg {
+    position: absolute;
+    left: calc(6% + 24px + 488px + 45px + 8px);
+
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 2px;
+    display: none;
+
+}
+
+main .bigImg .bigShow {
+    position: absolute;
+}
+
+main .-on {
+    display: block;
+}
+
+/* -------- content ------- */
+.content h1 {
+    font-family: 'Noto Serif TC';
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+/* psInfo */
+.light {
+    color: var(--sub_brown);
+    margin-right: 20px;
+}
+
+.content .stars {
+    display: inline;
+    line-height: 42px;
+}
+
+.stars:not(:last-child) {
+    margin-right: 4px;
+}
+
+.content .psInfo {
+    display: flex;
+    padding-left: 5px;
+    margin-bottom: 18px;
+}
+
+.content .psInfo li {
+    display: flex;
+    margin-right: 28px;
+}
+
+.content .psInfo li p:first-child {
+    margin-right: 6px;
+}
+
+/* pInfo */
+.content .pInfo {
+    padding-left: 5px;
+}
+
+.content .pInfo li {
+    display: flex;
+}
+
+.content .pInfo .colorBox {
+    /* border: 1px solid rebeccapurple; */
+    margin-top: 6px;
+
+}
+
+.content .pInfo .colorbtn {
+    align-self: center;
+    background-color: #fff;
+    border: .8px solid var(--pri_brown);
+    height: 36px;
+    margin-right: 10px;
+    font-family: 'Noto Serif TC';
+    font-size: 16px;
+    border-radius: 2px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.content .pInfo .-chosen{
+    background-color: var(--sub_brown);
+    color: #fff;
+}
+
+/* numBox */
+.content .pInfo .numBox {
+    margin-top: 14px;
+}
+
+.content .pInfo .counter {
+    align-self: center;
+    vertical-align: center;
+    display: flex;
+    border: .8px solid var(--pri_brown);
+    border-radius: 2px;
+    margin-right: 16px;
+}
+
+.content .pInfo .counter i {
+    display: inline-block;
+    /* border: .8px solid var(--pri_brown); */
+    height: 36px;
+    line-height: 36px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.content .pInfo .pnum {
+    height: 36px;
+    padding: 3px;
+    text-align: center;
+    box-sizing: border-box;
+    border: none;
+    border-right: .8px solid var(--pri_brown);
+    border-left: .8px solid var(--pri_brown);
+    width: 36px;
+    font-size: 16px;
+    font-family: 'Noto Serif TC';
+}
+
+.content .pInfo .pnum:focus {
+    outline: none;
+}
+
+input[type=number i]::-webkit-inner-spin-button,
+input[type=number i]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.content .pInfo .priceBox {
+    margin-top: 6px;
+}
+
+.content .pInfo .priceBox p:nth-child(2) {
+    color: var(--sub_brown);
+    text-decoration: line-through;
+    margin-right: 16px;
+}
+
+.content .pInfo .priceBox p:nth-child(3) {
+    color: var(--pri_pink);
+    vertical-align: baseline;
+}
+
+.content .pInfo .priceBox p:nth-child(3) span {
+    /* display: inline-block; */
+    font-size: 28px;
+    margin-left: 4px;
+    vertical-align: top;
+}
+
+.tltp {
+    display: none;
+    color: var(--sub_brown);
+}
+.-on{
+    display: block;
+}
+
+.tltp span {
+    /* font-size: 14px; */
+    display: inline-block;
+    margin: 0 4px;
+}
+
+/*---- btnBox ----*/
+.content .pInfo .btnBox {
+    margin-top: 28px;
+}
+
+.content .pInfo .btnBox button {
+    background-color: #fff;
+    font-family: 'Noto Serif TC';
+    margin-right: 14px;
+    cursor: pointer;
+
+}
+
+.content .pInfo .btnBox button:hover::before {
+    display: none;
+    /* 去除 btn 預設 */
+}
+
+.content .pInfo .btnBox button:hover {
+    opacity: .85;
+}
+
+.content .pInfo .btnBox button:first-child {
+    background-color: var(--pri_pink);
+    color: #fff;
+}
+
+/*---- func ----*/
+.content .func {
+    position: absolute;
+    bottom: 54px;
+    right: 44px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .func svg {
+    margin-top: 20px;
+    cursor: pointer;
+    color: var(--pri_green);
+}
+
+.heartFill {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+    pointer-events: none;
+}
+.heartFill.-on{
+    display: block;
+}
+
+/*------- guess --------*/
+.guess p.title {
+    border-bottom: 1px solid var(--sub_brown);
+    margin-bottom: 40px;
+}
+
+.product {
+    margin-bottom: 60px;
+}
+
+.product ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product ul li {
+    width: 16%;
+    margin: 0 20px;
+    margin-bottom: 40px;
+}
+.product ul li a{
+    display: block;
+    text-decoration: none;
+    color: var(--pri_brown);
+    font-family: 'Noto Serif TC', serif;
+    position: relative;
+}
+.product ul li p {
+    line-height: 30px;
+}
+
+/* img */
+.product ul li .img {
+    border-radius: 3px;
+    padding-bottom: 100%;
+    background-size: 100%;
+    background-position: center center;
+    transition: .3s;
+    filter: saturate(.6);
+}
+.product ul li .img:hover{
+    filter: saturate(1.2);
+    background-size: 110%;
+}
+.product ul li .m1 {
+    background-image: url("../images/product/eucalyptus.jpg");
+}
+
+.product ul li .m2 {
+    background-image: url("../images/product/elf.jpg");
+}
+
+.product ul li .m3 {
+    background-image: url("../images/product/bluesea.jpg");
+}
+
+.product ul li .m4 {
+    background-image: url("../images/product/pearlpink.jpg");
+}
+
+
+.product ul li .m5 {
+    background-image: url("../images/product/tiger.jpg");
+}
+
+
+.product ul li .m6 {
+    background-image: url("../images/product/pinky.jpg");
+}
+
+.product ul li .m7 {
+    background-image: url("../images/product/nature.jpg");
+}
+
+.product ul li .m8 {
+    background-image: url("../images/product/whitenature.jpg");
 }

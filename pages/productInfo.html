@@ -13,6 +13,10 @@
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,9 +40,136 @@
 
     <!-- content -->
     <main class="container">
-        
+        <ul class="imgs">
+            <li><img class="m1 img" src="../images/product/elf.jpg" alt=""></li>
+            <li><img class="m2 img" src="../images/product/elfDemo1.jpg" alt=""></li>
+            <li><img class="m3 img" src="../images/product/elfDemo2.jpg" alt=""></li>
+            <li><img class="m4 img" src="../images/product/elfDemo3.jpg" alt=""></li>
+        </ul>
+        <section class="orImg">
+            <img class="show" src="../images/product/elf.jpg" alt="">
+            <div class="glass"></div>
+        </section>
+        <div class="bigImg">
+            <img class="bigShow" src="../images/product/elf.jpg" alt="">
+        </div>
+        <section class="content">
+            <h1>夏日花園 — 谷精草果實耳環</h1>
+            <ul class="psInfo">
+                <li>
+                    <p>5.0</p>
+                    <i class="fa-sharp fa-solid fa-star stars"></i>
+                    <i class="fa-sharp fa-solid fa-star stars"></i>
+                    <i class="fa-sharp fa-solid fa-star stars"></i>
+                    <i class="fa-sharp fa-solid fa-star stars"></i>
+                </li>
+                <li>
+                    <p>320</p>
+                    <p>評價</p>
+                </li>
+                <li>
+                    <p>2929</p>
+                    <p>已售出</p>
+                </li>
+            </ul>
+
+            <ul class="pInfo">
+                <li>
+                    <p class="light">材質</p>
+                    <p>谷精草果實、金屬鍊子</p>
+                </li>
+                <li>
+                    <p class="light">款式</p>
+                    <p>掛墜式</p>
+                </li>
+                <li>
+                    <p class="light">顏色</p>
+                    <p>米色、褐色</p>
+                </li>
+                <li>
+                    <p class="light">尺寸</p>
+                    <p>果實約 1.5 - 2.5 公分</p>
+                </li>
+                <li class="colorBox">
+                    <p class="light">顏色</p>
+                    <button class="colorbtn" type="button">米色</button>
+                    <button class="colorbtn" type="button">楷棕色</button>
+                    <button class="colorbtn" type="button">彤色</button>
+                    <button class="colorbtn" type="button">褐色</button>
+                    
+                </li>
+                <li class="numBox">
+                    <p class="light">數量</p>
+                    <div class="counter">
+                        <i class="fa-solid fa-minus minus-btn numbtn"></i>
+                        <input class="pnum" type="text" value="1" maxlength="2">
+                        <i class="fa-solid fa-plus plus-btn numbtn"></i>
+                    </div>
+                    <p class="tltp">總價<span>159</span>元</p>
+                </li>
+                <li class="priceBox">
+                    <p class="light">價錢</p>
+                    <p>NT$220</p>
+                    <p>NT$<span>159</span></p>
+                </li>
+                <li class="btnBox">
+                    <button class="btn" type="button">立即購買</button>
+                    <button class="btn" type="button">加入購物車</button>
+                </li>
+            </ul>
+            <div class="func">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-share"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
+                </svg>
+                <svg class="heart" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-heart"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                </svg>
+                <svg class="heartFill" xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="var(--pri_green)"
+                    class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                </svg>
+            </div>
+        </section>
     </main>
 
+    <!-- guess -->
+    <div class="guess container">
+        <p class="title">猜你喜歡</p>
+        <div class="product">
+            <ul>
+                <li><a href="#">
+                        <div class="m1 img"></div>
+                        <p>清新尤物 — 尤加利葉耳環</p>
+                        <p><span class="price">NT$220 </span> NT$159</p>
+                    </a></li>
+                <li><a href="#">
+                        <div class="m3 img"></div>
+                        <p>海洋之星 — 藍滿天星耳環</p>
+                        <p>NT$220</p>
+                    </a></li>
+                <li><a href="#">
+                        <div class="m4 img"></div>
+                        <p>花漾少女 — 桃滿天星耳環</p>
+                        <p>NT$220</p>
+                    </a></li>
+                <li><a href="#">
+                        <div class="m5 img"></div>
+                        <p>茸茸 — 虎眼耳環</p>
+                        <p>NT$240</p>
+                    </a></li>
+                <li><a href="#">
+                        <div class="m6 img"></div>
+                        <p>日日小春 — 桃滿天星耳環</p>
+                        <p>NT$240</p>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
     <!-- btt btn -->
     <a href="#" class="btt"><img src="../images/ele/btt.svg" alt=""></a>
 

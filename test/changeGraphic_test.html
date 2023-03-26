@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        .out {
+            width: 300px;
+            height: 300px;
+            margin-right: 20px;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .glass {
+            width: 80px;
+            height: 80px;
+            background-color: #ffffffa3;
+            position: absolute;
+            z-index: 2;
+            display: none;
+
+            pointer-events: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-right: 20px;
+        }
+
+        li {
+            cursor: pointer;
+            width: 90px;
+            height: 90px;
+            margin-bottom: 10px;
+        }
+        
+        .bigWrapper {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            display: none;
+            position: relative;
+        }
+        
+        .-on {
+            display: block;
+        }
+        
+        .bigImg {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><img class="m1 img" src="../images/product/elf.jpg" alt=""></li>
+        <li><img class="m2 img" src="../images/product/eucalyptus.jpg" alt=""></li>
+        <li><img class="m3 img" src="../images/product/bluesea.jpg" alt=""></li>
+    </ul>
+    <div class="out">
+        <img class="show" src="../images/product/beauty.jpg" alt="">
+        <div class="glass" id="glass"></div>
+    </div>
+    <div class="bigWrapper -on">
+        <img src="../images/product/beauty.jpg" class="bigImg" />
+    </div>
+
+
+    <script>
+        let img = document.getElementsByClassName("img");
+        let show = document.getElementsByClassName("show")[0];
+        
+        let big = document.getElementsByClassName("bigWrapper")[0];
+        let glass = document.getElementsByClassName("glass")[0];
+        let bigImg = document.getElementsByClassName("bigImg")[0];
+
+
+        for (let i of img) {
+            i.addEventListener("click", function (e) {
+                show.src = this.src;
+                bigImg.src = this.src;
+            });
+        };
+
+        //放大
+        
+
+        show.addEventListener("mouseenter", function () {
+            big.classList.add("-on");
+            glass.classList.add("-on");
+        });
+        show.addEventListener("mouseleave", function () {
+            big.classList.remove("-on");
+            glass.classList.remove("-on");
+        });
+
+        //mouse --------------------
+
+        //滑鼠相對圖片位置
+        show.addEventListener("mousemove", function (e) {
+            let x = e.pageX - parseInt(this.getBoundingClientRect().left) - 40;
+            let y = e.pageY - parseInt(this.getBoundingClientRect().top) - 40;
+            glass.style.left = x + "px";
+            glass.style.top = y + "px";
+            bigImg.style.width = 300 * 300 / 80 + "px";
+            bigImg.style.left = - x * (bigImg.offsetWidth / show.offsetWidth) + "px";
+            bigImg.style.top = -y * (bigImg.offsetHeight / show.offsetHeight) + "px";
+        });
+
+        //
+    </script>
+</body>
+
+</html>

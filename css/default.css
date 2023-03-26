@@ -55,6 +55,7 @@ p {
     letter-spacing: 0.04em;
 }
 
+
 /* btn & btn anime */
 .btn {
     display: inline-block;
@@ -266,9 +267,9 @@ footer .right {
     margin-right: 20px;
     /* for btt */
 }
-footer .right a:hover ,
-footer .left a:hover
-{
+
+footer .right a:hover,
+footer .left a:hover {
     color: var(--pri_pink);
 }
 
