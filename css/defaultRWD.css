@@ -1,0 +1,105 @@
+.container {
+    width: 370px;
+}
+
+/* ------------ nav ------------ */
+nav {
+    height: 50px;
+}
+nav .out > a{
+    width: 50%;
+    display: inline;
+}
+nav .out{
+    position: relative; /* for ul */
+}
+nav img{
+    width: 100%;
+}
+nav ul{
+    /* display: none; */
+    position: absolute;
+}
+
+/* ------------ bar ------------ */
+.bar{
+    display: block;
+    right: 20px;
+    height: 100%;
+}
+.bar span{
+    top: 30px;
+}
+.bar span:first-child{
+    top: 20px;
+}
+
+
+
+
+
+/* ------------ footer ------------ */
+footer{
+    padding-top: 30px;
+}
+footer .out{
+    flex-direction: column;
+}
+
+footer .left>a{
+    display: inline-block;
+    width: 28%;
+    
+
+}
+footer .left img{
+    margin-bottom: 2px;
+}
+footer .left{
+    width: auto;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 18px;
+}
+footer .left ul{
+    display: inline-block;
+    text-align: center;
+}
+footer .left ul li{
+    display: inline-block;
+}
+footer .left ul li a{
+    display: block;
+}
+footer .left ul i{
+    font-size: 22px;
+    padding-top: 12px;
+    margin: 0 10px;
+}
+
+
+footer .right{
+    margin: 0;
+    display: block;
+}
+
+footer .right li:not(:last-child){
+    display: none;
+}
+footer .right li:last-child a{
+    display: none;
+}
+footer .right li:last-child{
+    text-align: center;
+    white-space: nowrap;
+    color: var(--pri_brown);
+    letter-spacing: 0.08em;
+}
+footer .right li:last-child i{
+    margin-bottom: 8px;
+}
+footer .copyright{
+    font-size: 12px;
+    line-height: 28px;
+}
+

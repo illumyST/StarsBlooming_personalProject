@@ -498,3 +498,5 @@ main .slider_container {
     background-color: var(--sub_brown);
     border: none;
 }
+
+@import url('indexRWD.css');

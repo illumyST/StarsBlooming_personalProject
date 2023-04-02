@@ -85,7 +85,7 @@ button {
     border: none;
     width: 50px;
     height: 60px;
-    background-color:#ffffff00;
+    background-color: #ffffff00;
     /* padding: 20px 15px; */
     box-sizing: border-box;
     z-index: 100;
@@ -105,7 +105,7 @@ button span {
     top: 35px;
     right: 0;
     transition: .2s;
-    
+
 }
 
 button:hover span:last-child {
@@ -115,13 +115,15 @@ button:hover span:last-child {
 button:hover span:first-child {
     width: 65%;
 }
-button span.-on:first-child{
+
+button span.-on:first-child {
     background-color: #fff;
     transform: rotate(-45deg);
     top: 30px;
     width: 50%;
 }
-button span.-on:last-child{
+
+button span.-on:last-child {
     background-color: #fff;
     transform: rotate(45deg);
     top: 30px;
@@ -154,15 +156,17 @@ button span.-on:last-child{
 }
 
 .aside .navLan ul li {
-    margin-left: 0; /* cancel default */
-    position: static;
+    margin-left: 0;
+    /* cancel default */
+    position: relative;
     width: 100%;
-    
+
 }
 
 .aside .navLan ul li a {
     /* display: inline-block; */
-    bottom: 0; /* cancel default */
+    bottom: 0;
+    /* cancel default */
     text-align: right;
     padding: 12px 60px 12px 40px;
     white-space: nowrap;
@@ -174,16 +178,35 @@ button span.-on:last-child{
     padding-right: 10px;
 }
 
-.aside .navLan ul li:last-child a {
+.aside .navLan ul>li:last-child a {
     letter-spacing: .28em;
 }
+
+/* sub nav */
+.aside .navLan ul li ol {
+    left: -124px;
+    top: 0;
+    width: auto;
+}
+
+.aside .navLan ul li ol a {
+    text-align: center;
+    line-height: 40px;
+    padding: 5px 20px;
+}
+
+.aside .navLan ul ol li:hover a {
+    background-color: var(--pri_pink);
+    color: #fff;
+}
+
 
 /* aside hover */
 .aside .navLan ul li:hover a::after {
     display: none;
 }
 
-.aside .navLan ul li:hover a{
+.aside .navLan ul li:hover a {
     background-color: #ffffffc0;
 }
 
@@ -196,7 +219,8 @@ main {
     overflow-y: scroll;
     overflow-x: hidden;
 }
-.bg span{
+
+.bg span {
     display: inline-block;
     font-size: 16px;
     color: #fff;
@@ -207,9 +231,11 @@ main {
     letter-spacing: .2em;
     background-color: var(--pri_pink);
 }
-.g4 span{
+
+.g4 span {
     padding: 8px;
 }
+
 ::-webkit-scrollbar {
     display: none;
 }

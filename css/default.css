@@ -124,6 +124,8 @@ nav .out {
 }
 
 nav img {
+    display: block;
+    margin: 0;
     width: 70%;
 }
 
@@ -155,6 +157,63 @@ nav ul>li>a {
     bottom: -18px;
     transition: 0.2s ease-in;
 }
+
+/* bar */
+.bar {
+    cursor: pointer;
+    position: absolute;
+    right: calc((100vw - 1200px)/2 + 30px);
+    top: 0;
+    border: none;
+    width: 50px;
+    height: 60px;
+    background-color: #ffffff00;
+    /* padding: 20px 15px; */
+    box-sizing: border-box;
+    z-index: 100;
+
+    display: none;
+}
+
+.bar span:first-child {
+    margin-bottom: 3px;
+    top: 25px;
+}
+
+.bar span {
+    display: inline-block;
+    width: 50%;
+    height: 1.5px;
+    background-color: var(--pri_brown);
+    position: absolute;
+    top: 35px;
+    right: 0;
+    transition: .2s;
+
+}
+
+.bar:hover span:last-child {
+    width: 35%;
+}
+
+.bar:hover span:first-child {
+    width: 65%;
+}
+
+.bar span.-on:first-child {
+    background-color: #fff;
+    transform: rotate(-45deg);
+    top: 30px;
+    width: 50%;
+}
+
+.bar span.-on:last-child {
+    background-color: #fff;
+    transform: rotate(45deg);
+    top: 30px;
+    width: 50%;
+}
+
 
 /* for hover */
 nav ul>li>a::after {
