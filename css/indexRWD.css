@@ -1,6 +1,268 @@
-@import url("defaultRWD.css");
-@media screen and (max-width:414px) {
-    .bar{
-        display: block;
+header {
+    background-position: -880px 0;
+    position: relative;
+    padding: 15vh 10vw 0;
+}
+
+header::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: hbg 3s forwards linear;
+    backdrop-filter: blur(0px);
+}
+
+@keyframes hbg {
+    100% {
+        backdrop-filter: blur(5px);
     }
+}
+
+header h1 {
+    text-align: center;
+    color: #fff;
+
+}
+
+header h1>p {
+    font-size: 26px;
+    letter-spacing: .1em;
+    animation: hh1 1.8s ease .8s forwards;
+}
+
+header h1>span {
+    font-size: 60px;
+    line-height: 80px;
+    animation: hh1 1.8s ease 1.8s forwards;
+}
+
+header>p {
+    text-align: center;
+    font-size: 21px;
+    letter-spacing: .1em;
+    color: #ffff;
+    opacity: 0;
+
+    animation: hp 1.8s ease 2.8s forwards;
+}
+
+header svg {
+    display: none;
+}
+
+header img {
+    width: 20%;
+    animation: none;
+}
+
+@keyframes hh1 {
+    100% {
+        opacity: .8;
+        bottom: 0;
+    }
+}
+
+@keyframes hp {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .8;
+        bottom: 0;
+    }
+}
+
+/* ---------- slider ---------- */
+main {
+    height: 300px;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+}
+
+main .slider_container {
+    position: relative;
+    width: 100%;
+    top: 50%;
+    height: 200px;
+}
+
+/* ---------- brand ---------- */
+.brand {
+    margin-bottom: 100px;
+}
+
+.brand img {
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.brand p {
+    font-size: 12px;
+    letter-spacing: 0em;
+    margin-bottom: 10px;
+}
+
+.brand::before {
+    width: 150px;
+    bottom: auto;
+    top: -130px;
+    left: -40px;
+
+}
+
+.brand::after {
+    width: 120px;
+    background-position: 30px 0;
+    top: 290px;
+
+    /* display: none; */
+}
+
+.colorbar {
+    height: 20px;
+    margin-bottom: 80px;
+}
+
+.hot{
+    margin-bottom: 80px;
+}
+.hot h1{
+    margin-bottom: 260px;
+}
+.hot .imgM{
+    display: none;
+}
+.hot .svg_l{
+    display: block;
+    width: 220px;
+    left: 16px;
+    top: -64px;
+}
+.hot .pathMout{
+    display: none;
+}
+.hot .imgR {
+    width:161.15px;
+    height: 157.57px;
+    clip-path: url(#pathR-small);
+    right: 25px;
+    top: 85px;
+}
+.hot ul div{
+    clip-path: url(#pathHots-small);
+}
+.textContainer p{
+    display: none;
+}
+
+.hot .textContainer{
+    left: 50px;
+    top: 115px;
+}
+.textContainer a{
+    margin-left: 24px;
+    margin-top: 10px;
+    padding:6px 12px;
+    font-size: 14px;
+    
+}
+.hot ul li:nth-child(even){
+    display: none;
+}
+.hot ul div{
+    width: 100px;
+    height: 100px;
+    
+}
+.hot ul{
+    margin-bottom: 50px;
+}
+
+.hot .hotbtn{
+    display: inline-block;
+    position: relative;
+}
+
+.hot .hotbtn::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    outline: 1px solid var(--pri_pink);
+    opacity: 0;
+    outline-offset: -1px;
+    animation: hotbtn 1.5s linear infinite;
+}
+.hot .hotbtn::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+    outline: 1px solid var(--pri_pink);
+    opacity: 0;
+    outline-offset: -1px;
+    animation: hotbtn 1.5s linear 1s infinite;
+}
+@keyframes hotbtn{
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 0;
+        outline-offset: 16px;
+        border-radius: 8px;
+    }
+}
+
+/* ------------ comment ------------ */
+.comment{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin-bottom: 80px;
+}
+.comment h1{
+    margin-bottom: 36px;
+}
+.comment li{
+    padding: 0 10px;
+    margin-right: 15px;
+}
+.comment .comTop:hover,
+.comment .comDown:hover {
+    animation-play-state: running;
+}
+
+/* news */
+.news{
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+.news div{
+    padding: 6px 12px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.news ul{
+    width: 100%;
+}
+.news div h1{
+    font-size: 24px;
+}
+.news ul p{
+    line-height: 45px;
 }

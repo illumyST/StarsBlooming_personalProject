@@ -27,6 +27,7 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" type="text/css" href="../css/defaultRWD.css" media="screen and (max-width: 414px)">
+    <link rel="stylesheet" type="text/css" href="../css/indexRWD.css" media="screen and (max-width: 414px)">
 </head>
 
 <body>
@@ -40,22 +41,20 @@
         <p>– Stars Blooming Acc</p>
         <img src="../images/logoHead.svg" alt="">
         <svg width="1865" height="947" viewBox="0 0 1865 947" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 576.5C69 847 240.805 910.649 352.064 910.649C517.206 910.649 559.614 694.465 745.212 686.959C930.81 679.452 889.899 930.166 745.212 931.667C600.526 933.168 705.614 631.342 932.307 830.081C1193.74 1059.28 1663.22 917.655 1721.6 673.948C1783.33 416.228 1473.2 397.843 1427.23 570.86C1376.84 760.521 1664.22 830.081 1696.65 636.416C1729.32 441.337 1544.48 477.78 1523.03 435.745C1501.57 393.709 1520.03 371.69 1545.98 369.188C1571.92 366.686 1612.83 427.832 1567.93 453.76C1523.03 479.688 1429.4 415.829 1506.5 323C1607 202 1908 241 1858.5 1" stroke="#F4F0EC" stroke-width="2"/>
-            </svg>     
+            <path
+                d="M1 576.5C69 847 240.805 910.649 352.064 910.649C517.206 910.649 559.614 694.465 745.212 686.959C930.81 679.452 889.899 930.166 745.212 931.667C600.526 933.168 705.614 631.342 932.307 830.081C1193.74 1059.28 1663.22 917.655 1721.6 673.948C1783.33 416.228 1473.2 397.843 1427.23 570.86C1376.84 760.521 1664.22 830.081 1696.65 636.416C1729.32 441.337 1544.48 477.78 1523.03 435.745C1501.57 393.709 1520.03 371.69 1545.98 369.188C1571.92 366.686 1612.83 427.832 1567.93 453.76C1523.03 479.688 1429.4 415.829 1506.5 323C1607 202 1908 241 1858.5 1"
+                stroke="#F4F0EC" stroke-width="2" />
+        </svg>
     </header>
 
     <!-- nav -->
     <div class="nav navbtt"></div>
-    <!-- <button class="bar">
-        <span></span>
-        <span></span>
-    </button> -->
 
     <!-- slider -->
     <main>
-        <!-- <div class="slider_container">
+        <div class="slider_container">
             <img src="../images/banner/newproduct.jpg" alt="newproduct">
-        </div> -->
+        </div>
     </main>
 
     <!-- brand -->
@@ -68,100 +67,114 @@
     <div class="colorbar"></div>
 
     <!-- hot product -->
-    <!-- <div class="hot container"> -->
-        <h1 class="h1_sub">熱銷商品</h1>
+    <div class="hot container">
+    <h1 class="h1_sub">熱銷商品</h1>
 
-        <!-- img path L -->
-        <!-- <svg class="svg_l" width="500" height="442" viewBox="0 0 500 442" fill="none"
+    <!-- img path L -->
+    <svg class="svg_l" width="500" height="442" viewBox="0 0 500 442" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M169.274 0.215035C250.008 -1.99174 283.106 58.2182 330.453 89.0795C393.183 129.968 488.827 146.693 498.394 220.823C508.5 299.134 438.537 365.097 371.521 407.314C311.272 445.268 237.033 450.379 169.453 428.04C107.522 407.569 67.451 354.972 37.8586 297.023C5.57949 233.812 -11.2039 168.153 8.85849 106.987C28.9209 45.8211 98.4492 2.15097 169.274 0.215035Z"
                 fill="#B7B4A1" />
-        </svg> -->
-
-        <!-- img path M -->
-        <svg>
-            <clipPath id="pathM" style="width:100px;">
-                <path fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10"
-                    d="M102.025 1.07893C144.407 2.86302 168.556 45.7539 178.851 87.0071C186.901 119.263 171.668 151.581 144.256 170.301C119.373 187.293 88.035 182.591 62.6522 166.358C29.8831 145.402 -6.63391 117.479 2.39464 79.579C13.2421 34.044 55.3669 -0.885191 102.025 1.07893Z" />
-            </clipPath>
         </svg>
 
-        <!-- img path R -->
-        <svg>
-            <clipPath id="pathR" style="width:100px;">
-                <path fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10"
-                    d="M245.975 0.0593576C293.067 -0.0561429 341.72 12.9137 369.993 47.9157C397.485 81.9507 385.624 126.295 382.223 168.735C377.479 227.933 396.058 296.791 347.003 334.808C287.795 380.693 199.979 393.653 129.525 364.57C57.0548 334.654 2.28648 265.543 0.712769 191.86C-0.656155 127.766 69.9954 89.7964 122.774 48.522C158.673 20.4482 199.058 0.174426 245.975 0.0593576Z" />
-            </clipPath>
-        </svg>
+    <!-- img path M -->
+    <svg>
+        <clipPath id="pathM" style="width:100px;">
+            <path fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10"
+                d="M102.025 1.07893C144.407 2.86302 168.556 45.7539 178.851 87.0071C186.901 119.263 171.668 151.581 144.256 170.301C119.373 187.293 88.035 182.591 62.6522 166.358C29.8831 145.402 -6.63391 117.479 2.39464 79.579C13.2421 34.044 55.3669 -0.885191 102.025 1.07893Z" />
+        </clipPath>
+    </svg>
 
-        <div class="imgR"></div>
-        <div class="imgM"></div>
+    <!-- img path R -->
+    <svg>
+        <clipPath id="pathR" style="width:100px;">
+            <path fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10"
+                d="M245.975 0.0593576C293.067 -0.0561429 341.72 12.9137 369.993 47.9157C397.485 81.9507 385.624 126.295 382.223 168.735C377.479 227.933 396.058 296.791 347.003 334.808C287.795 380.693 199.979 393.653 129.525 364.57C57.0548 334.654 2.28648 265.543 0.712769 191.86C-0.656155 127.766 69.9954 89.7964 122.774 48.522C158.673 20.4482 199.058 0.174426 245.975 0.0593576Z" />
+        </clipPath>
+    </svg>
+    <svg>
+        <clipPath id="pathR-small" style="width:100px;">
+            <path fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10"
+            d="M103.07 0.49641C122.681 0.448517 142.94 5.82662 154.714 20.3407C166.162 34.4537 161.223 52.8415 159.807 70.4401C157.831 94.9873 165.568 123.54 145.14 139.304C120.485 158.331 83.9173 163.705 54.5788 151.645C24.4012 139.241 1.59475 110.583 0.939433 80.029C0.369391 53.4515 29.7899 37.7071 51.7679 20.5921C66.7168 8.95091 83.5336 0.544125 103.07 0.49641Z"
+            />
+        </clipPath>
+    </svg>   
+        
+    <div class="imgR"></div>
+    <div class="imgM"></div>
 
-        <!-- img path M_out -->
-        <svg class="pathMout" width="200" height="200" viewBox="0 0 200 200" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M111.819 2.39747C157.968 4.34018 184.264 51.0444 195.474 95.9653C204.239 131.089 187.652 166.28 157.803 186.664C130.708 205.167 96.5852 200.047 68.9461 182.371C33.2642 159.552 -6.49876 129.146 3.33233 87.8768C15.144 38.2934 61.0133 0.258725 111.819 2.39747Z"
-                fill="white" fill-opacity="0.1" stroke="#798778" stroke-width="2" />
-        </svg>
+    <!-- img path M_out -->
+    <svg class="pathMout" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M111.819 2.39747C157.968 4.34018 184.264 51.0444 195.474 95.9653C204.239 131.089 187.652 166.28 157.803 186.664C130.708 205.167 96.5852 200.047 68.9461 182.371C33.2642 159.552 -6.49876 129.146 3.33233 87.8768C15.144 38.2934 61.0133 0.258725 111.819 2.39747Z"
+            fill="white" fill-opacity="0.1" stroke="#798778" stroke-width="2" />
+    </svg>
 
-        <!-- img text -->
-        <div class="textContainer">
-            <h2>桃滿天星耳環</h2>
-            <p>從天上摘星給你，<br>白色顯示我的真心，<br>花瓣上也沾染了桃紅的浪漫。<br>是十分顯氣色的一款！</p>
-            <a class="btn" href="#">查看商品</a>
-        </div>
+    <!-- img text -->
+    <div class="textContainer">
+        <h2>桃滿天星耳環</h2>
+        <p>從天上摘星給你，<br>白色顯示我的真心，<br>花瓣上也沾染了桃紅的浪漫。<br>是十分顯氣色的一款！</p>
+        <a class="btn" href="productInfo.html">查看商品</a>
+    </div>
 
-        <!-- the hots -->
-        <ul>
-            <li>
-                <a href="#">
-                    <div class="hot1"></div>
-                    <h3>星系耳環</h3>
-                </a>
-            </li>
+    <!-- the hots -->
+    <ul>
+        <li>
+            <a href="#">
+                <div class="hot1"></div>
+                <h3>星系耳環</h3>
+            </a>
+        </li>
 
-            <li>
-                <a href="#">
-                    <div class="hot2"></div>
-                    <h3>桃滿天星耳環</h3>
-                </a>
-            </li>
+        <li>
+            <a href="#">
+                <div class="hot2"></div>
+                <h3>桃滿天星耳環</h3>
+            </a>
+        </li>
 
-            <li>
-                <a href="#">
-                    <div class="hot3"></div>
-                    <h3>尤加利葉耳環</h3>
-                </a>
-            </li>
+        <li>
+            <a href="#">
+                <div class="hot3"></div>
+                <h3>尤加利葉耳環</h3>
+            </a>
+        </li>
 
-            <li>
-                <a href="#">
-                    <div class="hot4"></div>
-                    <h3>虞美人耳環</h3>
-                </a>
-            </li>
+        <li>
+            <a href="#">
+                <div class="hot4"></div>
+                <h3>虞美人耳環</h3>
+            </a>
+        </li>
 
-            <li>
-                <a href="#">
-                    <div class="hot5"></div>
-                    <h3>虎眼耳環</h3>
-                </a>
-            </li>
-        </ul>
+        <li>
+            <a href="#">
+                <div class="hot5"></div>
+                <h3>虎眼耳環</h3>
+            </a>
+        </li>
+    </ul>
 
-        <!-- the hots - svg path -->
-        <svg>
-            <clipPath id="pathHots" style="width:100px;">
-                <path fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10"
-                    d="M115.986 0.000388656C138.254 -0.0583793 161.261 6.5408 174.63 24.3502C187.63 41.6676 182.022 64.2302 180.413 85.8246C178.17 115.945 186.956 150.981 163.759 170.324C135.761 193.671 94.2361 200.265 60.9202 185.467C26.6516 170.246 0.753425 135.081 0.00926474 97.5906C-0.638056 64.9788 32.7708 45.6596 57.7283 24.6587C74.7038 10.3745 93.8004 0.0589368 115.986 0.000388656Z" />
-            </clipPath>
-        </svg>
+    <!-- the hots - svg path -->
+    <svg>
+        <clipPath id="pathHots" style="width:100px;">
+            <path fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10"
+                d="M115.986 0.000388656C138.254 -0.0583793 161.261 6.5408 174.63 24.3502C187.63 41.6676 182.022 64.2302 180.413 85.8246C178.17 115.945 186.956 150.981 163.759 170.324C135.761 193.671 94.2361 200.265 60.9202 185.467C26.6516 170.246 0.753425 135.081 0.00926474 97.5906C-0.638056 64.9788 32.7708 45.6596 57.7283 24.6587C74.7038 10.3745 93.8004 0.0589368 115.986 0.000388656Z" />
+        </clipPath>
+    </svg>
+    <svg>
+        <clipPath id="pathHots-small" style="width:100px;">
+            <path fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10"
+            d="M60.2269 0.000199004C71.6291 -0.029892 83.409 3.34909 90.2546 12.4681C96.911 21.3351 94.0393 32.8879 93.2158 43.9448C92.0673 59.3675 96.5657 77.3069 84.6882 87.2112C70.3525 99.1654 49.0904 102.542 32.0317 94.9649C14.4851 87.1712 1.2244 69.1657 0.843367 49.9694C0.511919 33.2711 17.6183 23.3791 30.3973 12.626C39.0893 5.31204 48.8673 0.0301774 60.2269 0.000199004Z" />
+        </clipPath>
+    </svg>
 
-        <!-- the hots - btn -->
-        <a class="btn" href="product.html">更多商品</a>
-    <!-- </div> hots container -->
+    <!-- the hots - btn -->
+    <div class="hotbtn"><a class=" btn" href="product.html">更多商品</a></div>
+    
+</div> 
+    <!-- above hots container -->
 
     <!-- comment -->
     <div class="comment">
@@ -244,7 +257,7 @@
     </div>
 
     <!-- btt btn -->
-    <a href="#" class="btt"><img src="../images/ele/btt.svg" alt=""></a>
+    <a href="#" class="btt hide"><img src="../images/ele/btt.svg" alt=""></a>
 
     <!-- footer -->
     <div class="footer"></div>
@@ -285,6 +298,8 @@
             $(".footer").load("default.html .footer>footer");
         });
     </script>
+
+    <script src="../js/default.js"></script>
 </body>
 
 </html>

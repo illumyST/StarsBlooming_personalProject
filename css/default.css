@@ -192,29 +192,6 @@ nav ul>li>a {
 
 }
 
-.bar:hover span:last-child {
-    width: 35%;
-}
-
-.bar:hover span:first-child {
-    width: 65%;
-}
-
-.bar span.-on:first-child {
-    background-color: #fff;
-    transform: rotate(-45deg);
-    top: 30px;
-    width: 50%;
-}
-
-.bar span.-on:last-child {
-    background-color: #fff;
-    transform: rotate(45deg);
-    top: 30px;
-    width: 50%;
-}
-
-
 /* for hover */
 nav ul>li>a::after {
     content: "";
