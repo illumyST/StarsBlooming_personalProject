@@ -1,0 +1,79 @@
+.wrapper{
+    flex-direction: column;
+}
+.wrapper .left{
+    margin: 0;
+}
+.title{
+    margin: 40px 0 20px 0;
+}
+.title+p{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 28px;
+    letter-spacing:normal;
+}
+.title+p~br{
+    display: none;
+}
+.wrapper input[type="text"], .wrapper textarea, .wrapper .left button{
+    width: 100%;
+}
+.right h2{
+    margin-top: 28px;
+}
+#textarea{
+    margin-bottom: 0;
+}
+
+.progress{
+    display: none;
+}
+
+.below{
+    padding: 0;
+    margin-bottom: 60px;
+}
+.imgOut{
+    flex-direction: column;
+}
+.below .imgContainer{
+    width:100%;
+    height:300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.below .imgContainer p{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 90px;
+    top: 70px;
+    font-size: 10px;
+}
+.below .imgContainer img{
+    height: 60%;
+    left: 75px;
+}
+.flower{
+    display: flex;
+}
+.below .imgOut .fl{
+width: 110px;
+height: 140px;
+margin-top: 20px;
+}
+.below .imgOut .fl:not(:last-child){
+    
+    margin-right: 20px;
+}
+
+.last h2{
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+form{
+    margin-bottom: 80px;
+}

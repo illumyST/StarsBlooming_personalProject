@@ -137,8 +137,10 @@ main {
     border-radius: 12px;
 
     box-sizing: border-box;
-    border: 1px solid var(--pri_brown);
-
+    border-bottom: 1px solid var(--sub_brown);
+    border-left: 0;
+    border-right: 1px solid var(--sub_brown);
+    border-top:0;
     padding-left: 40px;
 }
 
@@ -158,7 +160,7 @@ main {
     color: var(--pri_green);
     position: absolute;
     left: 18px;
-    top: calc(50% - 6px);
+    top: calc(50% - 6.5px);
     transform: translateY(calc(-50%));
     z-index: 2;
 }
@@ -185,6 +187,7 @@ main {
     margin-bottom: 40px;
     color: var(--pri_brown);
     margin-left: auto;
+    background-color: #e9e6dc;
 }
 
 /* right */
@@ -200,6 +203,7 @@ main {
 }
 
 .wrapper .check {
+    font-size: 20px;
     border-radius: 12px;
     height: 50px;
     line-height: 48px;
