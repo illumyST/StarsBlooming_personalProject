@@ -99,13 +99,17 @@
     letter-spacing: 0.3em;
     color: #fff;
 }
-.menu li:hover a{
+.menu li:hover>a{
     color: var(--pri_brown);
 }
 
 .menu ol {
-    display: none;
-    transition: .2s;
+    height: 0px;
+    transition: .3s;
+    overflow: hidden;
+}
+.menu ol.-on{
+    height: 160px;
     margin-bottom: 16px;
 }
 
@@ -117,35 +121,30 @@
 }
 
 /* menu - ol */
-.menuOl input {
+.menuOl{
+    position: relative;
+}
+
+.menuOl::after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
     position: absolute;
-    left: -9999px;
+    right: 30px;
+    top: 15px;
+    transform: rotate(-135deg);
+    transition: .3s;
+    transition-property: transform,position;
 }
-
-.menuOl label {
-    cursor: pointer;
-    /* border: 1px solid rgb(0, 132, 88); */
-    user-select: none;
-    position: absolute;
-    right: 35px;
-    top: 125px;
-    /* background-color: #ffedd5; */
-    width: 7px;
-    height: 7px;
-    border-top: 1px solid#ffffff;
-    border-left: 1px solid#fff;
-
-    transform: rotate(225deg);
-    transition: .2s;
+.menuOl:hover::after{
+    border-top: 1px solid var(--pri_brown);
+    border-left: 1px solid var(--pri_brown);
 }
-
-.menuOl input[type="checkbox"]:checked~ol {
-    display: block;
-}
-
-.menuOl input[type="checkbox"]:checked+label {
+.menuOl.-on::after{
+    top:20px;
     transform: rotate(45deg);
-    top: 130px;
 }
 
 /* right ------------------ */

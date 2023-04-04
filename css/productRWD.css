@@ -1,0 +1,138 @@
+body{
+    overflow: hidden;
+}
+.title{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 80px;
+    width: 100%;
+    padding-top: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: fixed;
+    font-size: 22px;
+}
+div.wrapper.container{
+    width:100%;
+    display: block;
+    overflow: scroll;
+    position: relative;
+    top: 80px;
+    padding-top: 60px;
+    height: calc(100vh - 160px);
+    box-sizing: border-box;
+}
+
+.wrapper .menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.wrapper .productArea{
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-left:0;
+    flex-basis: none;
+    
+    padding: 0 10px;
+}
+.wrapper .circle{
+    width: 40px;
+    height: 40px;
+}
+.wrapper .circle{
+    position: fixed;
+    right: 127px;
+    top:64px;
+}
+.circle svg path{
+    d: path("M 0,50 a 40,40 0 1,1 0,1 z");
+}
+.g1{
+    width: 100%;
+    /* clip-path: none; */
+}
+.top{
+    display: none;
+}
+.wrapper .menu{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 0 3px;
+    position: fixed;
+    top: 130px;
+}
+.menu li{
+    flex-grow: 1;
+}
+.menu li a{
+    font-size: 14px;
+    margin: 0 2px;
+    letter-spacing: 0.03em;
+}
+.menuOl{
+    /* width: 62px; */
+    left: -5px;
+    z-index: 100;
+}
+.menuOl::after{
+    width: 4px;
+    height: 4px;
+    right: -1px;
+    top: 17px;
+}
+.menu ol{
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    background-color: var(--pri_green);
+    padding: 0 6px 0 4px;
+}
+.menu ol.-on{
+    margin-bottom: 0;
+    height: auto;
+}
+.menu ol li a{
+    font-size: 14px;
+    white-space: nowrap;
+    letter-spacing:normal;
+    color: #fff;
+}
+
+.bread{
+    display: none;
+}
+
+.product ul li{
+    margin:0 10px 25px;
+    width: 175px;
+}
+.product{
+    position: relative;
+    z-index: -1;
+}
+
+.page{
+    margin-bottom: 100px;
+}
+.page ul{
+    width: 60%;
+}
+
+footer{
+    display: none;
+}
+.product ul li .tag{
+    top: 15px;
+}
+.product ul li .tag p{
+    font-size: 12px;
+    padding:0 4px 0 4px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+.product ul li p{
+    line-height: 24px;
+}
