@@ -35,7 +35,7 @@
     /* border: 1px solid blue; */
     display: inline-block;
     margin: 0 auto;
-    counter-reset: num;
+    
     position: relative;
 }
 

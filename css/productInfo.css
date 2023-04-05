@@ -158,7 +158,7 @@ main .-on {
     box-sizing: border-box;
     cursor: pointer;
 }
-.content .pInfo .-chosen{
+.content .pInfo .colorbtn.-chosen{
     background-color: var(--sub_brown);
     color: #fff;
 }

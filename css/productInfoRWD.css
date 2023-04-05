@@ -1,0 +1,92 @@
+header{
+    margin-bottom: 22px;
+}
+main.container{
+    flex-direction: column;
+    background-image:none;
+    border: none;
+    padding:0;
+    height: auto;
+}
+main .imgs{
+    flex-direction: row;
+}
+
+/* 取消放大鏡功能 */
+main .orImg img, main .bigImg img
+.guess{
+    pointer-events: none;
+}
+
+.content{
+    position: relative;
+}
+
+
+main .orImg{
+margin: 0;
+height: 370px;
+order: -1;
+}
+
+main .imgs{
+    width: 70%;
+}
+main .imgs li{
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+.content h1{
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+.content .psInfo li{
+    margin-right: 20px;
+}
+.content .psInfo{
+    margin-bottom: 15px;
+}
+.content .pInfo{
+    padding: 0;
+   
+}
+.content .pInfo li.forbg{
+    background-color: var(--pri_bg);
+    padding-left: 12px;
+    
+}
+.content .pInfo li:not(.forbg){
+    padding-left: 12px;
+}
+.content .pInfo .colorBox{
+    margin-top: 30px;
+}
+.content .pInfo .colorbtn{
+    padding: 0 25px;
+    color: var(--pri_brown);
+}
+.content .pInfo .numBox{
+    margin-top: 20px;
+}
+.content .pInfo .pnum{
+    width: 60px;
+}
+.content .pInfo .counter i{
+    padding: 0 15px;
+}
+.content .pInfo .priceBox{
+    margin-top: 16px;
+}
+.content .func{
+    bottom: 4px;
+    right: 5px;
+    flex-direction: row;
+}
+.content .func svg{
+    width: 18px;
+    margin-left: 15px;
+}
+.content .func svg:nth-child(3){
+    margin-left: 25px;
+}

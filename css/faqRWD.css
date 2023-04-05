@@ -1,0 +1,140 @@
+header .header_text{
+    display: none;
+}
+header{
+    padding: 60px 0 90px 0;
+    margin-bottom: 60px;
+}
+header ul{
+    width: 280px;
+}
+header ul li a{
+    font-size: 16px;
+}
+.main_text p{
+    font-size: 13px;
+    line-height: 28px;
+}
+.main_text{
+margin-bottom: 30px;
+}
+.showOut{
+    display: block;
+    height:auto;
+    pointer-events: none;
+    counter-reset: num;
+    margin-bottom: 100px;
+}
+
+.showOut .text{
+    padding: 0;
+}
+.showOut li:not(:last-child){
+    margin: 0;
+}
+.showOut:not(:hover) .s1 .text {
+    padding: 0;
+    margin: 0;
+}
+.showOut:not(:hover) .s1 .text{
+    margin: 0;
+}
+.showOut:not(:hover) .s1{
+    background-image: none;
+}
+.showOut .bg{
+    background-color: #ffffff00;
+}
+.showOut h3{
+    padding: 0;
+    margin: 0;
+    padding-left: 50px;
+    writing-mode: horizontal-tb;
+    font-size: 16px;
+    background-color: var(--pri_bg);
+    position: relative;
+    /* border: 1px solid var(--pri_rice); */
+    box-sizing: border-box;
+}
+.showOut li:nth-child(odd) h3{
+    background-color: var(--pri_rice);
+}
+.showOut h3::before {
+    counter-increment: num;
+    content: counter(num)".";
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    /* 視覺對齊 */
+    transform: translate(0, -50%);
+    /* background-color: var(--pri_bg);
+    width: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--pri_rice); */
+}
+
+
+.showOut:not(:hover) .s1 .text h3{
+    margin-bottom: 0px;
+}
+.showOut p{
+    display: block;
+    /* background-color: var(--pri_bg); */
+    padding: 10px 24px 10px 24px;
+}
+
+.showOut>li.bg{
+    margin-bottom: 10px;
+}
+
+.showOut >li.bg >.text> h3{
+    margin-bottom: 0px;
+}
+.faq{
+    width: 98%;
+}
+
+.faq li h3{
+    font-size: 16px;
+    padding: 2px 10px;
+}
+.faq li h3::before{
+    width: 14px;
+    height: 1px;
+}
+.faq li h3::after{
+    height: 14px;
+    width: 1px;
+    right: 27px;
+}
+.faq li p{
+    padding: 10px 40px;
+}
+#exchange::before,
+#exchange::after,
+#faq::before,
+#faq::after,
+.footer::after,
+.footer::before{
+    width: 15px;
+    height: 15px;
+}
+#exchange::after{
+    left: 110px;
+    top: -70px;
+}
+#exchange::before{
+    left: 60px;
+}
+.footer::before{
+    top: -40px;
+}
+.footer::after{
+    top: -56px;
+    left: 95px;
+}
+
+.faq{
+    margin-bottom: 100px;
+}

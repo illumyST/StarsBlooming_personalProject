@@ -28,6 +28,7 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="../css/faq.css">
     <link rel="stylesheet" type="text/css" href="../css/defaultRWD.css" media="screen and (max-width: 414px)">
+    <link rel="stylesheet" type="text/css" href="../css/faqRWD.css" media="screen and (max-width: 414px)">
 </head>
 
 <body>
@@ -184,7 +185,7 @@
     <script>
         $(function () {
             $(".faq>ul>li").click(function () {
-                $(this).find('p').slideToggle("slow");
+                $(this).find('p').slideToggle(400);
                 //QQQ
 
                 $(this).find('h3').toggleClass('-open');
@@ -226,6 +227,7 @@
     </script>
 
 <script src="../js/default.js"></script>
+<script src="../js/faq.js"></script>
 </body>
 
 </html>
