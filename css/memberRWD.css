@@ -1,0 +1,53 @@
+header{
+    margin-bottom: 24px;
+}
+main.container{
+    flex-direction: column;
+    height: auto;
+    border-radius: 3px;
+    overflow: hidden;
+    
+}
+main .left h1{
+    padding: 0;
+    display: block;
+    text-align: center;
+    line-height:40px;
+font-size: 24px;
+}
+main .left{
+    clip-path: none;
+    padding: 20px 0;
+    background-color: #ffffff55;
+    background-image:url(../images/bg/faq.jpg);
+    background-blend-mode: screen;
+    background-size: 190%;
+    
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+main .right{
+    padding: 0;
+    margin-bottom: 30px;
+}
+.tab_list{
+    padding: 0 80px;
+}
+.tab_list li a{
+    font-size: 18px;
+    line-height: 35px;
+}
+.tab_list::after{
+    width: 80px;
+    height: 1px;
+    left: 62px;
+}
+div.tab_container div.tab_content form.tab{
+    padding: 0 16px 16px;
+}
+.tab_list.-right::after{
+    left: 215px;
+    transform: scaleY(100%);
+}
