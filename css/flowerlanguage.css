@@ -77,6 +77,9 @@ header ul li:first-child a::after {
 }
 
 /* nav bar ----------------- */
+.bar{
+    display: block;
+}
 button {
     cursor: pointer;
     position: absolute;

@@ -7,3 +7,7 @@ bar.addEventListener("click", function () {
     bar.children[0].classList.toggle("-on");
     bar.children[1].classList.toggle("-on");
 });
+
+if(window.innerWidth <=1200 ){
+    alert("為提供最佳體驗，請至桌機版瀏覽")
+}

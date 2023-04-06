@@ -22,7 +22,9 @@ main .orImg img, main .bigImg img
     position: relative;
 }
 
-
+.content .stars{
+    line-height: 30px;
+}
 main .orImg{
 margin: 0;
 height: 370px;
@@ -89,4 +91,25 @@ main .imgs li{
 }
 .content .func svg:nth-child(3){
     margin-left: 25px;
+}
+.product ul{
+    justify-content:flex-start;
+}
+.product ul li {
+    width: 110px;
+    margin: 0;
+    margin-bottom: 30px;
+}
+.product ul li:not(:nth-child(3n)){
+    margin-right: 20px;
+}
+.product ul li .img{
+    filter: none;
+}
+.product ul li p{
+    font-size: 13px;
+    line-height: 24px;
+}
+.product ul li a p span{
+    display: none;
 }

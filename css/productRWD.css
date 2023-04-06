@@ -1,5 +1,5 @@
 body{
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .title{
     margin-top: 0px;
@@ -27,6 +27,7 @@ div.wrapper.container{
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 20;
 }
 .wrapper .productArea{
     overflow: hidden;
@@ -35,6 +36,9 @@ div.wrapper.container{
     flex-basis: none;
     
     padding: 0 10px;
+}
+.productArea{
+    pointer-events: none;
 }
 .wrapper .circle{
     width: 40px;
@@ -54,6 +58,7 @@ div.wrapper.container{
 }
 .top{
     display: none;
+    pointer-events: none;
 }
 .wrapper .menu{
     display: flex;
@@ -103,15 +108,20 @@ div.wrapper.container{
 
 .bread{
     display: none;
+    pointer-events: none;
 }
-
+.product ul li a{
+    pointer-events: all;
+}
 .product ul li{
     margin:0 10px 25px;
     width: 175px;
+    pointer-events: none;
 }
 .product{
     position: relative;
-    z-index: -1;
+    z-index: 0;
+    pointer-events: all;
 }
 
 .page{
@@ -135,4 +145,7 @@ footer{
 }
 .product ul li p{
     line-height: 24px;
+}
+.product ul li button{
+    display: none;
 }
