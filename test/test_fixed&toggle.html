@@ -1,114 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            height: 3000px;
-        }
-        nav{
-            background-color: brown;
-            height: 50px;
-            margin-bottom: 20px;
-        }
-        aside{
-            border: 1px solid red;
-            width: 150px;
-            position: sticky;
-            left: 20px;
-            top: 20px;
-        }
 
-        .mom{
-            height: 300px;
-            width: 300px;
-            border: 10px solid salmon;
-            padding: 20px;
-            margin: 0 auto;
-
-            background-image: url("網頁設計/css2_hw1/img/html_bg.png"),
-            url("網頁設計/css2_hw1/img/list_bg.png");
-            background-repeat: no-repeat, repeat-;
-            background-size: 100px auto, 200px auto;
-            background-position: 0 0, 100px 0;
-            position: relative;
-
-        }
-        .son{
-            height: 100px;
-            width: 100px;
-            /* border: 1px solid salmon; */
-            background-color: aqua;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-
-            border: 2px solid black;
-        }
-
-        .test{
-            height: 100px;
-            width: 100px;
-            background-color: aqua;
-            position: absolute;
-            left: -100px;
-            top: 0;
-        }
-        label input{
-            position: relative;
-            left: -9999px;
-        }
-        label{
-            user-select: none;
-            font-family: verdana;
-            font-size: 20px;
-            font-weight: bold;
-
-            background-color: #2a97c3;
-            color: #fff;
-            padding: 12px 30px;
-            border-radius: 40px;
-            position: relative;
-        }
-        label span::before{
-            content: "";
-            width: 24px;
-            height: 24px;
-            border-radius: 20px;
-            border: 3px solid #138aa8;
-            background-color: #fff;
-
-            position: absolute;
-            left: 22px;
-            top:9px;
-        }
-        label input[type="checkbox"]:checked+ span::before{
-            border: 3px solid #fff;
-            background-color: #054d5f;
-        }
-        label:hover{
-            cursor: pointer;
-        }
     </style>
 </head>
-<body>
-    <nav>選單 選單 選單</nav>
-    <br><br><br><br><br><br>
-    <aside>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore vero explicabo debitis veritatis ab culpa natus sunt alias neque.
-        <div class="test"></div>
-    </aside><p>
 
-    <div class="mom">
-        <div class="son"></div>
+<body>
+    <div class="help-box">
+        <div class="help">
+            <a href="">
+                <p>即刻捐款</p>
+                <img src="../IMG/cat-5989630_1920.jpg" alt="">
+            </a>
+        </div>
     </div>
 
-    <label for="checkbox">
-        <input type="checkbox" id="checkbox">
-        <span>Toggle</span>
-    </label>
+    <div class="check-box main-block">
+        <div class="check">
+            <span class="check-close">&times;</span>
+            <ul>
+                <li>
+                    <a href="" class="ibon-index">超商捐款</a>
+                </li>
+                <li><a href="shop.html">網銀轉賬</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(window).scroll(function () {
+            let object = $('.help');
+            let objectOffset = object.offset();
+            let objectWidth = object.outerWidth();
+            let windowHeight = $(window).height();
+            let scrollY = $(window).scrollTop();
 
+            object.css({
+                position: 'fixed',
+                top: '48%',
+                right: 0,
+                transform: 'translateY(-50%)'
+            })
+
+            if (objectOffset.top + objectWidth / 2 > scrollY + windowHeight) {
+                object.css({
+                    top: scrollY + windowHeight - objectWidth / 2,
+                    transform: 'translateY(-100%)'
+                });
+            } else if (objectOffset.top + objectWidth / 2 < scrollY) {
+                object.css({
+                    top: scrollY + objectWidth / 2,
+                    transform: 'translateY(-50%)'
+                });
+            }
+        })
+    </script>
 </body>
+
 </html>

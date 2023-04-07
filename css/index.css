@@ -134,6 +134,7 @@ main {
     box-sizing: border-box;
     position: relative;
     margin-bottom: 160px;
+    position: relative;
 }
 
 main .slider_container {
@@ -142,15 +143,74 @@ main .slider_container {
 
     position: absolute;
     left: 50%;
-    top: 45%;
-    /*下方有輪播點*/
+    top: 50%;
     transform: translate(-50%, -50%);
 
+    overflow: hidden;
+    display: flex;
 }
 
 .slider_container img {
     display: block;
     width: 100%;
+}
+
+main .slider_container .sliderWbtn {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg/flowerWithVase.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+
+main .slider_container .sliderWbtn div {
+    float: right;
+    margin: 80px 100px;
+
+}
+
+main .slider_container .sliderWbtn h1 {
+    margin-bottom: 20px;
+    letter-spacing: .3em;
+}
+
+main .slider_container .sliderWbtn h2 {
+    color: #fff9eeb1;
+    font-size: 36px;
+    margin-bottom: 40px;
+    letter-spacing: .3em;
+}
+
+main .slider_container .sliderWbtn a {
+    color: var(--sub_brown);
+    border-color: var(--sub_brown);
+}
+
+main .slider_container .sliderWbtn .btn::before {
+    background-color: var(--sub_brown);
+}
+
+main svg {
+    /* border: 1px solid red; */
+    width: 40px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
+
+#previous {
+    left: calc((100vw - 900px)/2 - 40px - 20px);
+}
+
+#next {
+    left: calc((100vw - 900px)/2 + 900px + 20px);
 }
 
 /* brand */
@@ -499,5 +559,7 @@ main .slider_container {
     background-color: var(--sub_brown);
     border: none;
 }
+
+
 
 @import url('indexRWD.css');
