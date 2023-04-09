@@ -38,12 +38,13 @@
     <h1 class="h1_sub title">花禮傳情</h1>
     <p>這份卡片不僅僅是一張紙片，而是一份情感的傳達。<br>透過設計精美的卡片，將心意百分百傳達到他 / 她手中吧！</p>
 
-    <div class="progress progressHide">
+    <div class="progress progressHide stop">
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li class="pro1"></li>
+            <li class="pro2"></li>
+            <li class="pro3"></li>
         </ul>
+        <span class="progressSpan"></span>
     </div>
     <form action="#">
         <main>
@@ -51,33 +52,32 @@
                 <div class="left">
                     <h2>寄件人資訊</h2>
                     <label class="intext" for="sendName">
-                        <input type="text" id="sendName" onfocus="this.placeholder=''" onblur="this.placeholder='寄件人姓名'"
+                        <input class="formInput" type="text" id="sendName" onfocus="this.placeholder=''" onblur="this.placeholder='寄件人姓名'"
                             placeholder="寄件人姓名">
                     </label>
                     <label class="intext" for="location">
-                        <input type="text" id="location" onfocus="this.placeholder=''"
+                        <input class="formInput" type="text" id="location" onfocus="this.placeholder=''"
                             onblur="this.placeholder='您現在的地點'" placeholder="您現在的地點">
                     </label>
-                    <button>自動定位</button>
+                    <button class="position">自動定位</button>
 
                     <h2>收件人資訊</h2>
                     <label class="intext" for="reName">
-                        <input type="text" id="reName" onfocus="this.placeholder=''" onblur="this.placeholder='收件人姓名'"
+                        <input class="formInput" type="text" id="reName" onfocus="this.placeholder=''" onblur="this.placeholder='收件人姓名'"
                             placeholder="收件人姓名">
                     </label>
                     <label class="intext" for="reLocation">
-                        <input type="text" id="reLocation" onfocus="this.placeholder=''"
+                        <input class="formInput" type="text" id="reLocation" onfocus="this.placeholder=''"
                             onblur="this.placeholder='寄送地點'" placeholder="寄送地點">
                     </label>
                     <label class="intext" for="reMail">
-                        <input type="text" id="reMail" onfocus="this.placeholder=''" onblur="this.placeholder='電子郵件'"
+                        <input class="formInput" type="text" id="reMail" onfocus="this.placeholder=''" onblur="this.placeholder='電子郵件'"
                             placeholder="電子郵件">
                     </label>
                 </div>
                 <div class="right">
                     <h2>傳情內容</h2>
-                    <textarea name="" id="textarea" onfocus="this.value=''"
-                        onblur=imgShow(event)>請輸入您的心意吧！建議文長100-200字唷！</textarea>
+                    <textarea name="" id="textarea">請輸入您的心意吧！建議文長100-200字唷！</textarea>
 
                     <input type="checkbox" id="checkbox">
                     <label class="check" for="checkbox"> 一併寄送電子版本卡片
@@ -89,15 +89,21 @@
             <h2>選擇花束種類</h2>
             <div class="imgOut">
                 <div class="imgContainer">
-                    <img src="../images/ele/card_f1.png" alt="">
+                    <img class='flowerShow' src="../images/ele/card_f1.png" alt="">
                     <p id="imgP">
                         即時預覽傳情內容
                     </p>
                 </div>
                 <div class="flower">
-                    <button class="f1 fl"></button><br>
-                    <button class="f2 fl"></button><br>
-                    <button class="f3 fl"></button>
+                    <button class="f1 fl">
+                        <img src="../images/ele/card_f1.png" alt="">
+                    </button><br>
+                    <button class="f2 fl">
+                        <img src="../images/ele/card_f2.png" alt="">
+                    </button><br>
+                    <button class="f3 fl">
+                        <img src="../images/ele/card_f3.png" alt="">
+                    </button>
                 </div>
             </div>
         </div>
@@ -112,21 +118,6 @@
 
     <!-- footer -->
     <div class="footer"></div>
-
-    <!-- imgP script -->
-    <script>
-        let textarea = document.getElementById("textarea");
-        let imgP = document.getElementById("imgP");
-        function imgShow(event) {
-            if (!textarea.value) {
-                textarea.value = '請輸入您的心意吧！建議文長150-200字唷！';
-            } else {
-                imgP.innerText = textarea.value;
-            }
-            console.log(imgP.innerText)
-        }
-
-    </script>
 
     <!-- btt script -->
     <script>

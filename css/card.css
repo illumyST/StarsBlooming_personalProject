@@ -24,7 +24,12 @@
     z-index: 90;
     opacity: 1;
 
-    transition: .2s;
+    /* transition: .2s; */
+}
+.progress.stop{
+    position: absolute;
+    right: 120px;
+    top:1600px;
 }
 
 .progressHide {
@@ -35,7 +40,7 @@
     /* border: 1px solid blue; */
     display: inline-block;
     margin: 0 auto;
-    
+    counter-reset:num;
     position: relative;
 }
 
@@ -50,16 +55,17 @@
     z-index: -2;
 }
 
-.progress ul::after {
-    content: "";
+.progress span{
+    display: block;
     height: 0%;
     width: 3px;
     background-color: var(--pri_green);
     position: absolute;
-    top: 0;
+    top: 20px;
     left: 50%;
     z-index: -1;
     transform: translate(-50%);
+    transition: .3s;
 }
 
 .progress ul li {
@@ -195,6 +201,7 @@ main {
     height: 310px;
     padding: 10px 0 0 20px;
     color: var(--pri_green);
+    resize: none;
 }
 
 .wrapper input[type="checkbox"] {
@@ -306,6 +313,7 @@ textarea:focus {
     width: 120px;
     height: 170px;
     border-radius: 12px;
+    padding-top: 5px;
     box-sizing: border-box;
     border: 1px solid var(--pri_brown);
     margin-bottom: 10px;
@@ -313,21 +321,10 @@ textarea:focus {
     background-repeat: no-repeat;
     background-position: center;
 }
-
-.below .imgOut .f1 {
-    background-size: 60%;
-    background-image: url("../images/ele/card_f1.png");
+.below .imgOut .fl img{
+    height: 95%;
 }
 
-.below .imgOut .f2 {
-    background-size: 45%;
-    background-image: url("../images/ele/card_f2.png");
-}
-
-.below .imgOut .f3 {
-    background-size: 50%;
-    background-image: url("../images/ele/card_f3.png");
-}
 
 /* last */
 .last {

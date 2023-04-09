@@ -8,20 +8,59 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <!-- 若需相容 IE11，要加載 Promise Polyfill-->
+        <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 </head>
 
 <body>
     <div id="demo">哈囉</div>
+
+    <button onclick='alertTest()'>Alert</button>
+    <button onclick='confirmTest()'>Confirm</button>
     <script>
+        function alertTest() {
+            Swal.fire(
+                "查詢作業失敗", //標題 
+                "您所輸入的序號不存在或是系統被玩壞了!", //訊息內容(可省略)
+                "error" //圖示(可省略) success/info/warning/error/question
+                //圖示範例：https://sweetalert2.github.io/#icons
+            );
+        }
+        function confirmTest() {
+            Swal.fire({
+                title: "操作確認",
+                text: "請點選你想按的按鈕",
+                showCancelButton: true
+            }).then(function(result) {
+               if (result.value) {
+                    Swal.fire("您按了OK");
+               }
+               else {
+                   Swal.fire("您選擇了Cancel");
+               }
+            });
+        }
+    </script>
+    <!-- <script>
+        fetch('http://ip-api.com/json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (response) {
+                console.log(response.country + ', ' + response.city);
+            });
+        
         // console.log('yes!!');
         var x = document.getElementById("demo");
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-            }
-        }
+        // function getLocation() {
+        //     if (navigator.geolocation) {
+        //         navigator.geolocation.getCurrentPosition(showPosition);
+        //     } else {
+        //         x.innerHTML = "Geolocation is not supported by this browser.";
+        //     }
+        // }
 
         function showPosition(position) {
             var NS = position.coords.latitude;
@@ -38,26 +77,26 @@
             // http://ip-api.com/json
             // "https://api.ipdata.co?api-key=test"
             // 'https://api.ipregistry.co/?key=tryout'
-    //         fetch('http://ip-api.com/json')
-    // .then(function (response) {
-    //     return response.json();
-    // })
-    // .then(function (response) {
-    //     console.log(response.country + ', ' + response.city);
-    // });
+            //         fetch('http://ip-api.com/json')
+            // .then(function (response) {
+            //     return response.json();
+            // })
+            // .then(function (response) {
+            //     console.log(response.country + ', ' + response.city);
+            // });
 
-    fetch('http://ip-api.com/json')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (response) {
-        console.log(response.country + ', ' + response.city);
-    });
-}
-        getLocation();
-   
-    </script>
-    <script>
+            fetch('http://ip-api.com/json')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (response) {
+                    console.log(response.country + ', ' + response.city);
+                });
+        }
+        // getLocation();
+
+    </script> -->
+    <!-- <script>
         function ipLookUp() {
             $.ajax('http://ip-api.com/json')
                 .then(
@@ -74,7 +113,7 @@
                 );
         }
         ipLookUp()
-    </script>
+    </script> -->
 
 </body>
 
