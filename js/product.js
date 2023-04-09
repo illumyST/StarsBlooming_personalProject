@@ -6,8 +6,3 @@ menuOl.addEventListener('click',function(e){
     this.querySelector("ol").classList.toggle("-on");
 })
 
-let a = document.querySelector(".productArea");
-console.log(a.innerHTML)
-a.addEventListener('click', function(e){
-    console.log(e.target)
-})

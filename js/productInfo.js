@@ -131,7 +131,7 @@ function printnum() {
     if (pnum.value > 1) {
         price.innerText = pnum.value * 159;
         tltp.classList.add("-on");
-    } else{
+    } else {
         tltp.classList.remove("-on");
     }
 };
@@ -140,19 +140,82 @@ counter.addEventListener("click", printnum);
 
 // func-heartFill
 let heart = document.getElementsByClassName("heart")[0];
-heart.addEventListener("click",()=>{
+heart.addEventListener("click", () => {
     heart.nextElementSibling.classList.toggle("-on");
 });
 
 // buy and cart / checknull
 let btns = document.getElementsByClassName("btn");
-function checknull(){
-    if(!choose){
+function checknull() {
+    if (!choose) {
         alert("請選擇顏色");
     }
 };
-for(let i of btns){
+for (let i of btns) {
     i.addEventListener("click", checknull);
 };
 
-// cart cookie
+// cart localstorage ------------------------
+function adding() {
+
+    // 定義 cartItem 內容物 -------------------
+    let itemId = document.getElementsByTagName("main")[0].getAttribute("data-id");
+    let pName = document.getElementsByClassName("pName")[0].innerText;
+    let color = document.querySelector("button.colorbtn.-chosen").innerText;
+    let buyNum = document.querySelector(".pnum").value;
+    let price = document.getElementsByClassName("perPrice")[0].innerText;
+    let cartItem = {
+        "itemId": itemId,
+        "pName": pName,
+        "color": color,
+        "buyNum": buyNum,
+        "price": price
+    }
+
+// localstorage 的 cartItems ------------
+    let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+
+    if (cartItems) { // 若存在
+        
+        // 如果是同樣商品，就只修改商品數量
+        let same = 0;
+        let cnt = -1;
+        for(let i of cartItems){
+            cnt +=1;
+            if(i.itemId == cartItem.itemId && i.color == cartItem.color){
+                same = 1;
+                break;
+            }
+        };
+        if(same){
+            cartItems[cnt].buyNum = parseInt(cartItems[cnt].buyNum) + parseInt(cartItem.buyNum);
+        }else{ // 如果不是，就新增
+            cartItems.push(cartItem);
+        }
+    } else { // 若不存在
+        cartItems = [cartItem]
+    }
+    // 新增進 localstorage
+    localStorage.setItem('cartItems', JSON.stringify(cartItems))
+
+    alert(`${cartItem.color}【 ${cartItem.pName} 】 ${cartItem.buyNum}副 已加入購物車囉！`)
+}
+
+let toCart = document.getElementsByClassName("toCart")[0];
+let plus = document.getElementsByClassName("plus")[0];
+
+toCart.addEventListener('click', function () {
+    //新增資料到 localstorage，並跑動畫
+    if (choose) {
+        plus.classList.add("-toCart");
+        setTimeout(adding,600);
+        setTimeout(function(){
+            plus.classList.remove("-toCart")
+        },800);
+        setTimeout(function(){
+            fShowCartNum();
+            plus.classList.remove("-toCart")
+        },600);
+   
+    }
+});

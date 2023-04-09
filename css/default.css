@@ -351,3 +351,20 @@ footer .copyright span {
 .hide {
     transform: translateX(180%);
 }
+
+/* 顯示購物車商品數量 */
+.showCartNum{
+    display: none;
+    font-weight: 300;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    line-height: 13px;
+    width: 15px;
+    height: 15px;
+    background-color: #CC8B6E;
+    position: absolute;
+    right: -8px;
+    top: 0;
+    border-radius: 50%;
+}

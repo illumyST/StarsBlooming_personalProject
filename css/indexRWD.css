@@ -75,20 +75,54 @@ header img {
         bottom: 0;
     }
 }
+.nav{
+    box-shadow: 0 1px 8px #6860566b;
+}
 
 /* ---------- slider ---------- */
 main {
     height: 300px;
-    padding: 20px 20px;
+    /* padding: 20px 20px; */
     box-sizing: border-box;
     margin-bottom: 80px;
+    background-color: var(--pri_bg)
 }
 
 main .slider_container {
     position: relative;
     width: 100%;
     top: 50%;
-    height: 200px;
+    height: 180px;
+}
+main svg{
+    width: 30px;
+    color: #ffffffba;
+}
+#previous{
+    left: auto;
+}
+#next{
+    right: 0;
+    left: auto;
+}
+.slider_container img{
+    height: auto;
+}
+main .slider_container .sliderWbtn div{
+    margin: 40px 40px 0 0 ;
+    
+}
+main .slider_container .sliderWbtn h1{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+main .slider_container .sliderWbtn h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+main .slider_container .sliderWbtn a{
+    font-size: 14px;
+    padding: 6px 12px;
 }
 
 /* ---------- brand ---------- */

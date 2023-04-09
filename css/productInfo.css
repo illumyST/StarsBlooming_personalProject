@@ -158,7 +158,8 @@ main .-on {
     box-sizing: border-box;
     cursor: pointer;
 }
-.content .pInfo .colorbtn.-chosen{
+
+.content .pInfo .colorbtn.-chosen {
     background-color: var(--sub_brown);
     color: #fff;
 }
@@ -236,7 +237,8 @@ input[type=number i]::-webkit-outer-spin-button {
     display: none;
     color: var(--sub_brown);
 }
-.-on{
+
+.-on {
     display: block;
 }
 
@@ -296,7 +298,8 @@ input[type=number i]::-webkit-outer-spin-button {
     display: none;
     pointer-events: none;
 }
-.heartFill.-on{
+
+.heartFill.-on {
     display: block;
 }
 
@@ -322,13 +325,15 @@ input[type=number i]::-webkit-outer-spin-button {
     margin: 0 20px;
     margin-bottom: 40px;
 }
-.product ul li a{
+
+.product ul li a {
     display: block;
     text-decoration: none;
     color: var(--pri_brown);
     font-family: 'Noto Serif TC', serif;
     position: relative;
 }
+
 .product ul li p {
     line-height: 30px;
 }
@@ -342,10 +347,12 @@ input[type=number i]::-webkit-outer-spin-button {
     transition: .3s;
     filter: saturate(.6);
 }
-.product ul li .img:hover{
+
+.product ul li .img:hover {
     filter: saturate(1.2);
     background-size: 110%;
 }
+
 .product ul li .m1 {
     background-image: url("../images/product/eucalyptus.jpg");
 }
@@ -378,4 +385,39 @@ input[type=number i]::-webkit-outer-spin-button {
 
 .product ul li .m8 {
     background-image: url("../images/product/whitenature.jpg");
+}
+
+/* .plus{
+    position: absolute;
+    right: 0;
+    top: -70px;
+    z-index: 110;
+} */
+.plus {
+    font-size: 30px;
+    position: absolute;
+    right: 255px;
+    bottom: 77px;
+    z-index: 110;
+    opacity: .5;
+    display: none;
+}
+.plus.-toCart{
+    display: block;
+    opacity: 0;
+    animation: toCart .8s ;
+}
+@keyframes toCart {
+    0% {
+        right: 255px;
+        bottom: 77px;
+        font-size: 30px;
+        opacity: .5;
+    }
+    100% {
+        right: -20px;
+        bottom: 670px;
+        font-size: 14px;
+        opacity: 0;
+    }
 }

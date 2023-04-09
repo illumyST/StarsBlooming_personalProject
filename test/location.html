@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="demo">哈囉</div>
+    <script>
+        // console.log('yes!!');
+        var x = document.getElementById("demo");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            var NS = position.coords.latitude;
+            var WE = position.coords.longitude;
+            // if ((NS > 25.06)&&(WE > 121.50)) {
+            // var checkin = document.getElementById("textbox").classList;
+            // var u = document.getElementById("demo").classList;
+            // checkin.toggle("popuptext");
+            // u.toggle("submit");
+            // console.log('yes3');
+            // }
+            // else{
+            // 	// console.log('yes4');
+            // http://ip-api.com/json
+            // "https://api.ipdata.co?api-key=test"
+            // 'https://api.ipregistry.co/?key=tryout'
+    //         fetch('http://ip-api.com/json')
+    // .then(function (response) {
+    //     return response.json();
+    // })
+    // .then(function (response) {
+    //     console.log(response.country + ', ' + response.city);
+    // });
+
+    fetch('http://ip-api.com/json')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (response) {
+        console.log(response.country + ', ' + response.city);
+    });
+}
+        getLocation();
+   
+    </script>
+    <script>
+        function ipLookUp() {
+            $.ajax('http://ip-api.com/json')
+                .then(
+                    function success(response) {
+                        console.log('User\'s Location Data is ', response);
+                        console.log('User\'s Country', response.country);
+                        console.log('User\'s city', response.city);
+                    },
+
+                    function fail(data, status) {
+                        console.log('Request failed.  Returned status of',
+                            status);
+                    }
+                );
+        }
+        ipLookUp()
+    </script>
+
+</body>
+
+</html>

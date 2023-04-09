@@ -233,3 +233,8 @@ footer .copyright{
 .btn::before{
     display: none;
 }
+
+.showCartNum{
+    right: 157px;
+    top: 27px;
+}
