@@ -20,6 +20,10 @@ body {
     color: var(--pri_brown);
 }
 
+.nav{
+    box-shadow: 0 1px 10px #6860566b;
+}
+
 
 /* font */
 h1 {

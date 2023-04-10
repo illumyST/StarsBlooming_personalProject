@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
+    
 }
 
 .wrapper {
@@ -19,7 +19,7 @@
     border: 1px solid red;
 
     display: flex;
-    overflow-x: scroll;
+    overflow:hidden;
 
     position: relative;
 
@@ -44,6 +44,9 @@
     background-color: #f2e4ff;
 }
 
+.s4 {
+    background-color: #4bb3a0;
+}
 svg {
     cursor: pointer;
     width: 50px;

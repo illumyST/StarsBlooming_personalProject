@@ -170,7 +170,7 @@
 } */
 
 .g1 h3 {
-    color: #ffffffbc;
+    color: #ffffffe0;
     font-size: 30px;
     font-family: 'Noto Serif TC', serif;
     font-weight: 700;
@@ -196,6 +196,8 @@
     height: 100%;
 
     clip-path: polygon(0 0, 93% 0, 93% 40%, 50% 40%, 50% 100%, 0 100%);
+
+    transition: .5s;
 }
 
 .bg {
@@ -242,7 +244,7 @@
     margin-bottom: 20px;
 }
 
-.gnav ul li:last-child {
+.gnav ul li.-on {
     background-color: var(--pri_pink);
 }
 

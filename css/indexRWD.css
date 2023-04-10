@@ -84,8 +84,8 @@ main {
     height: 300px;
     /* padding: 20px 20px; */
     box-sizing: border-box;
-    margin-bottom: 80px;
-    background-color: var(--pri_bg)
+    background-color: var(--pri_bg);
+    
 }
 
 main .slider_container {
@@ -128,6 +128,7 @@ main .slider_container .sliderWbtn a{
 /* ---------- brand ---------- */
 .brand {
     margin-bottom: 100px;
+    padding-top: 80px;
 }
 
 .brand img {
@@ -139,12 +140,13 @@ main .slider_container .sliderWbtn a{
     font-size: 12px;
     letter-spacing: 0em;
     margin-bottom: 10px;
+    color: var(--pri_brown);
 }
 
 .brand::before {
     width: 150px;
     bottom: auto;
-    top: -130px;
+    top: -50px;
     left: -40px;
 
 }
@@ -152,9 +154,12 @@ main .slider_container .sliderWbtn a{
 .brand::after {
     width: 120px;
     background-position: 30px 0;
-    top: 290px;
+    top: 350px;
 
     /* display: none; */
+}
+.shapes{
+    display: none;
 }
 
 .colorbar {
@@ -263,6 +268,12 @@ main .slider_container .sliderWbtn a{
     }
 }
 
+.hot .svg_l path{
+    animation: none;
+}
+#pathR path{
+    animation: none;
+}
 /* ------------ comment ------------ */
 .comment{
     padding-top: 30px;
@@ -275,6 +286,7 @@ main .slider_container .sliderWbtn a{
 .comment li{
     padding: 0 10px;
     margin-right: 15px;
+    border-radius: 8px;
 }
 .comment .comTop:hover,
 .comment .comDown:hover {
@@ -294,8 +306,15 @@ main .slider_container .sliderWbtn a{
 .news ul{
     width: 100%;
 }
+.news div{
+    width: 100%;
+    outline-offset: -5px;
+    text-align: center;
+}
 .news div h1{
     font-size: 24px;
+    line-height: 42px;
+    animation: none;
 }
 .news ul p{
     line-height: 45px;

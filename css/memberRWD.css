@@ -1,11 +1,12 @@
 header{
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 }
 main.container{
     flex-direction: column;
     height: auto;
     border-radius: 3px;
     overflow: hidden;
+    margin-bottom: 50px;
     
 }
 main .left h1{

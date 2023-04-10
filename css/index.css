@@ -125,16 +125,14 @@ header>p {
     }
 }
 
-
-
 /* slider */
 main {
     height: calc(100vh - 80px);
-    background-color: var(--pri_rice);
+    background-color: var(--pri_bg);
     box-sizing: border-box;
     position: relative;
-    margin-bottom: 160px;
-    position: relative;
+    /* margin-bottom: 160px; */
+    z-index: 50;
 }
 
 main .slider_container {
@@ -203,6 +201,7 @@ main svg {
     top: 50%;
     transform: translate(0, -50%);
     cursor: pointer;
+    color: var(--sub_brown);
 }
 
 #previous {
@@ -214,10 +213,14 @@ main svg {
 }
 
 /* brand */
+
 .brand {
+    cursor:none;
     text-align: center;
     margin-bottom: 160px;
     position: relative;
+    padding-top: 160px;
+    transition: 1s;
 }
 
 .brand::after {
@@ -232,7 +235,7 @@ main svg {
 
     position: absolute;
     right: 0px;
-    top: 200px;
+    top: 350px;
 
 }
 
@@ -251,6 +254,37 @@ main svg {
     z-index: -1;
 
 }
+.brand .content{
+    background: #fff;
+     mix-blend-mode: screen;
+     position: relative;
+     z-index: -2;
+     cursor:none;
+}
+.shapes {
+    cursor:none;
+    position: absolute;
+    left: 0;
+    top: 412.5px;
+    height: 167px;
+    width: 100vw;
+    background: #41382f;
+    overflow: hidden;
+    z-index: -3;
+    /* border: 10px solid red; */
+}
+
+.shape {
+    cursor:none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    background-color: #cc8c6e;
+    width: 100px;
+    height: 100px;
+}
 
 .brand img {
     width: 210px;
@@ -262,6 +296,7 @@ main svg {
     font-size: 18px;
     letter-spacing: 0.2em;
     margin-bottom: 24px;
+    color: #000;
 }
 
 .colorbar {
@@ -276,6 +311,7 @@ main svg {
     position: relative;
     margin-bottom: 160px;
     text-align: center;
+    transition: 1s;
 }
 
 .hot h1 {
@@ -294,10 +330,21 @@ main svg {
     left: 140px;
     top: 100px;
 }
+.hot .svg_l path{
+    animation: pathL 3s linear infinite alternate;
+}
+@keyframes pathL {
+    50%{
+        d:path("M178.453 0.500233C259.187 -1.70654 292.107 48.2218 339.453 79.0831C402.184 119.971 485.934 135.87 495.5 210C505.606 288.311 456.016 358.283 389 400.5C328.752 438.454 246.034 431.339 178.453 409C116.522 388.529 67.5925 359.449 38 301.5C5.72094 238.289 -10.5622 167.665 9.50017 106.499C29.5626 45.3335 107.628 2.43617 178.453 0.500233Z")
+    }
+    100%{
+        d:path("M170.5 0.000245986C266.547 0.00013189 291.899 47.6306 339.246 78.4918C401.976 119.38 495.746 150.249 495.746 224.993C495.746 317.993 435.746 379.493 371.246 409.493C306.682 439.523 223.677 438.963 161.746 418.492C99.8151 398.021 60.8386 347.442 31.2462 289.493C-1.03293 226.282 -11.7538 148.492 18.2463 88.4926C48.2464 28.4929 99.6483 0.000331138 170.5 0.000245986Z")
+    }
+}
 
 .hot .imgR {
-    width: 387px;
-    height: 380px;
+    width: 390px;
+    height: 390px;
     background-image: url("../images/product/pinky.jpg");
     background-size: cover;
     clip-path: url(#pathR);
@@ -306,6 +353,19 @@ main svg {
     right: 200px;
     top: 150px;
 }
+
+#pathR path{
+    animation: pathR 3s linear infinite alternate;
+}
+@keyframes pathR{
+    50%{
+        d:path("M243.5 0.500064C290.593 0.384563 339.027 9.85499 367.3 44.857C394.791 78.892 388.401 133.059 385 175.5C380.256 234.698 391.055 304.484 342 342.5C282.792 388.385 197.955 401.584 127.5 372.5C55.0303 342.585 2.0737 274.183 0.499988 200.501C-0.868936 136.406 64.721 103.775 117.5 62.5005C153.399 34.4267 196.583 0.615132 243.5 0.500064Z")
+    }
+    100%{
+        d:path("M240.353 0.35113C287.445 0.23563 325.227 18.498 353.5 53.5C387.022 95 398.901 147.559 395.5 190C390.756 249.198 392.408 314.334 343.352 352.351C284.144 398.236 197.455 404.084 127 375C54.5303 345.085 1.94751 290.028 0.373794 216.345C-0.99513 152.251 47.0735 107.625 99.8525 66.3507C135.751 38.2769 193.436 0.466199 240.353 0.35113Z")
+    }
+}
+
 
 .hot .imgM {
     width: 180px;
@@ -354,12 +414,14 @@ main svg {
     color: var(--sub_green);
     background-color: rgb(255, 255, 255);
     text-align: center;
-    visibility: hidden;
+    /* visibility: hidden; */
+    opacity: 0;
     transition: .5s;
 }
 
 .textContainer .btn:hover::before {
-    visibility: visible;
+    /* visibility: visible; */
+    opacity: 1;
     content: "GO";
     color: var(--sub_green);
     position: absolute;
@@ -375,6 +437,10 @@ main svg {
 }
 
 .hot ul div {
+    position: relative;
+    right: 0;
+    top: 0;
+    
     width: 183px;
     height: 194px;
     box-sizing: border-box;
@@ -401,24 +467,39 @@ main svg {
 
 /* hot product - hots – photo */
 .hot1 {
+    animation: product 2s infinite linear alternate;
     background-image: url("../images/product/bluesea.jpg");
 }
 
 .hot2 {
+    animation: product 2s infinite .8s linear alternate;
     background-image: url("../images/product/pinky.jpg");
 }
 
 .hot3 {
+    animation: product 1.6s infinite .2s linear alternate;
     background-image: url("../images/product/eucalyptus.jpg");
 }
 
 .hot4 {
+    animation: product 2s infinite 1s linear alternate;
     background-image: url("../images/product/beauty.jpg");
 }
 
 .hot5 {
+    animation: product 2s infinite .6s linear alternate;
     background-image: url("../images/product/elf.jpg");
 }
+
+@keyframes product{
+    0%{
+        top:0px;
+    }
+    100%{
+        top:6px;
+    }
+}
+
 
 /* hot product - hots – hover */
 .hot li:hover div {
@@ -430,7 +511,7 @@ main svg {
     content: "";
     width: 200px;
     height: 200px;
-    background: radial-gradient(closest-side at 50% 50%, rgb(255, 255, 255, 0) 0% 60%, rgb(65, 56, 47, .3));
+    background: radial-gradient(closest-side at 50% 50%, rgb(255, 255, 255, 0) 0% 60%, rgb(65, 56, 47, .15));
     position: absolute;
     left: 0;
     top: 0;
@@ -448,6 +529,9 @@ main svg {
     padding-bottom: 80px;
     background-image: url("../images/bg/homeTexture.jpg");
     margin-bottom: 160px;
+
+    transition:1s;
+    position: relative;
 }
 
 .comment li {
@@ -520,17 +604,34 @@ main svg {
     display: flex;
     justify-content: space-between;
     margin-bottom: 160px;
+    transition:1s;
+    position: relative;
 }
 
 .news div {
     background-color: #CC8B6E;
-    padding: 10px 20px;
+    padding: 40px 30px 0 36px;
     height: auto;
+    width: 200px;
+    box-sizing: border-box;
+    outline: .8px solid #fff;
+    outline-offset: -10px;
 }
 
 .news div h1 {
-    font-size: 30px;
+    font-size: 26px;
     color: #fff;
+    animation: typing 3.5s steps(5) infinite forwards;
+    overflow: hidden;
+    white-space: nowrap;
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 160px;
+    }
 }
 
 .news ul {
