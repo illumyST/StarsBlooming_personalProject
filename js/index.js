@@ -1,3 +1,21 @@
+if(window.innerWidth <=1200 ){
+    setTimeout(function(){
+        console.log(1)
+        window.scroll({
+            top:innerHeight,
+            behavior:'smooth'
+        });
+    },6000);
+}else{
+    setTimeout(function(){
+        console.log(1)
+        window.scroll({
+            top:innerHeight,
+            behavior:'smooth'
+        });
+    },5000);
+}
+
 let sliderContainer = document.getElementsByClassName("slider_container")[0];
 
 let right = document.getElementById("next");

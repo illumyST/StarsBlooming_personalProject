@@ -149,3 +149,9 @@ footer{
 .product ul li button{
     display: none;
 }
+.product{
+    margin-bottom: 20px;
+}
+.page{
+    margin-bottom: 40px;
+}
