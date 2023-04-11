@@ -19,7 +19,7 @@
 
     <button onclick='alertTest()'>Alert</button>
     <button onclick='confirmTest()'>Confirm</button>
-    <script>
+    <!-- <script>
         function alertTest() {
             Swal.fire(
                 "查詢作業失敗", //標題 
@@ -42,8 +42,8 @@
                }
             });
         }
-    </script>
-    <!-- <script>
+    </script> -->
+    <script>
         fetch('http://ip-api.com/json')
             .then(function (response) {
                 return response.json();
@@ -54,13 +54,13 @@
         
         // console.log('yes!!');
         var x = document.getElementById("demo");
-        // function getLocation() {
-        //     if (navigator.geolocation) {
-        //         navigator.geolocation.getCurrentPosition(showPosition);
-        //     } else {
-        //         x.innerHTML = "Geolocation is not supported by this browser.";
-        //     }
-        // }
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
 
         function showPosition(position) {
             var NS = position.coords.latitude;
@@ -93,9 +93,9 @@
                     console.log(response.country + ', ' + response.city);
                 });
         }
-        // getLocation();
+        getLocation();
 
-    </script> -->
+    </script>
     <!-- <script>
         function ipLookUp() {
             $.ajax('http://ip-api.com/json')

@@ -9,28 +9,28 @@ $(window).scroll(function () {
 });
 
 // 即時預覽文字 -------------------------------
-let TAfinish=0;
+let TAfinish = 0;
 let textarea = document.getElementById("textarea");
 let imgP = document.getElementById("imgP");
 
 textarea.addEventListener('focus', function () {
     if (this.value == '請輸入您的心意吧！建議文長100-200字唷！') {
         textarea.value = '';
-        TAfinish=0;
+        TAfinish = 0;
     }
 });
 textarea.addEventListener('blur', function () {
     if (this.value == '') {
         textarea.style.color = "var(--pri_green)";
         textarea.value = '請輸入您的心意吧！建議文長100-200字唷！';
-        TAfinish=0;
+        TAfinish = 0;
     }
 });
 
 textarea.addEventListener('keyup', function () {
     textarea.style.color = "var(--pri_brown)";
     imgP.innerText = textarea.value;
-    TAfinish=1;
+    TAfinish = 1;
 })
 
 // 點擊切換圖片 -------------------------------
@@ -80,13 +80,18 @@ positionBtn.addEventListener('click', function (e) {
 - 顯示「所在經緯度」請按「Cancel/取消」
 `);
     if (ans) {
-        fetch('http://ip-api.com/json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (response) {
-                locationInput.value = `${response.country}  , ${response.city}`;
-            });
+        try {
+            fetch('http://ip-api.com/json')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (response) {
+                    locationInput.value = `${response.country}  , ${response.city}`;
+                });
+        } catch (error) {
+            console.log(error)
+            alert("不支援此方式，請嘗試「顯示經緯度」");
+        };
     } else {
         getLocation();
     }
@@ -98,15 +103,23 @@ positionBtn.addEventListener('click', function (e) {
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
-        console.log("in");
+        // navigator.geolocation.getCurrentPosition((position)=>{
+        //     console.log("inP")
+        //     var NS = (position.coords.latitude).toFixed(3);
+        //     var WE = (position.coords.longitude).toFixed(3);
+        //     console.log(NS, WE);
+        //     locationInput.value = `經度 ${WE} ， 緯度 ${NS}`;
+        // });
+        console.log("iL");
     } else {
         locationInput.value = "Geolocation is not supported by this browser.";
     }
 };
 function showPosition(position) {
+    console.log("inP")
     var NS = (position.coords.latitude).toFixed(3);
     var WE = (position.coords.longitude).toFixed(3);
-    console.log(NS,WE)
+    console.log(NS, WE);
     locationInput.value = `經度 ${WE} ， 緯度 ${NS}`;
 };
 
@@ -116,18 +129,18 @@ let emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za
 let reMail = document.getElementById("reMail");
 let reMailLabel = document.getElementsByClassName("reMail")[0];
 
-reMail.addEventListener('keyup',function(){
-    if(reMail.value.search(emailRule)==-1){
+reMail.addEventListener('keyup', function () {
+    if (reMail.value.search(emailRule) == -1) {
         reMailLabel.classList.add('-on');
         reMail.classList.add('-on');
-    }else{
+    } else {
         reMailLabel.classList.remove('-on');
         reMail.classList.remove('-on');
     }
 });
 
-reMail.addEventListener('blur',function(){
-    if(!reMail.value){
+reMail.addEventListener('blur', function () {
+    if (!reMail.value) {
         reMailLabel.classList.remove('-on');
         reMail.classList.remove('-on');
     };
@@ -148,37 +161,37 @@ form.addEventListener('click', function () {
             progressAmount += 1;
         }
     };
-    if(TAfinish){
+    if (TAfinish) {
         progressAmount += 1;
     }
-    if(reMail.value.search(emailRule)==-1){
+    if (reMail.value.search(emailRule) == -1) {
         progressAmount -= 1;
     }
-    if(progressAmount==6){
+    if (progressAmount == 6) {
         pro1.style.backgroundColor = "var(--pri_green)"
-    }else{
+    } else {
         pro1.style.backgroundColor = "#fff"
     };
-    progressSpan.style.height = `${progressAmount/7/2*100}%`
+    progressSpan.style.height = `${progressAmount / 7 / 2 * 100}%`
 });
 
 
 let progress = document.getElementsByClassName("progress")[0];
 
-window.addEventListener('scroll',function(){
+window.addEventListener('scroll', function () {
     // console.log(scrollY)
-    if(pro1.style.backgroundColor == "var(--pri_green)"){
+    if (pro1.style.backgroundColor == "var(--pri_green)") {
         let a = 42; // 視覺上一半的 span
-       if(scrollY>930 && scrollY < 1500){
-        pro2.style.backgroundColor = "var(--pri_green)";
-        progressSpan.style.height = `${a+((scrollY-930)/(1500-930))*50}%`
-       }
+        if (scrollY > 930 && scrollY < 1500) {
+            pro2.style.backgroundColor = "var(--pri_green)";
+            progressSpan.style.height = `${a + ((scrollY - 930) / (1500 - 930)) * 50}%`
+        }
     };
 
     // 控制進度條不要到最底
-    if(this.scrollY >=1380){
+    if (this.scrollY >= 1380) {
         progress.classList.add("stop");
-    }else{
+    } else {
         progress.classList.remove("stop");
     }
 });
