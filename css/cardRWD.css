@@ -78,3 +78,7 @@ border-width: .6px;
 form{
     margin-bottom: 80px;
 }
+
+.reMail.-on::after{
+    font-size: 13px;
+}

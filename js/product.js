@@ -10,6 +10,7 @@ menuOl.addEventListener('click',function(e){
 let glink = ["../images/bg/flowerWithVase.jpg", "../images/bg/g2.jpg","../images/bg/g3.jpg","../images/bg/g4.jpg"];
 let g1 = document.getElementsByClassName("g1")[0];
 let gnav = document.getElementsByClassName("gnav")[0].querySelectorAll("li");
+
 let cnt=0;
 
 

@@ -199,7 +199,7 @@ main {
 /* right */
 .wrapper textarea {
     height: 310px;
-    padding: 10px 0 0 20px;
+    padding: 14px 20px;
     color: var(--pri_green);
     resize: none;
 }
@@ -343,4 +343,19 @@ textarea:focus {
     cursor: pointer;
     background-color: #fff;
     font-family: 'Noto Serif TC', serif;
+}
+
+/* reMail regex */
+#reMail.-on{
+    border: 1.5px solid var(--pri_pink);
+}
+.reMail.-on::after{
+    content: "請輸入正確電子郵件！";
+    position: absolute;
+    font-size: 15px;
+    font-weight: 600;
+    left: 18px;
+    top: 50px;
+    z-index: 2;
+    color: var(--pri_pink);
 }

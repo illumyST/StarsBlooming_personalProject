@@ -110,6 +110,30 @@ function showPosition(position) {
     locationInput.value = `經度 ${WE} ， 緯度 ${NS}`;
 };
 
+// reMail Regex -------------------------------
+
+let emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+let reMail = document.getElementById("reMail");
+let reMailLabel = document.getElementsByClassName("reMail")[0];
+
+reMail.addEventListener('keyup',function(){
+    if(reMail.value.search(emailRule)==-1){
+        reMailLabel.classList.add('-on');
+        reMail.classList.add('-on');
+    }else{
+        reMailLabel.classList.remove('-on');
+        reMail.classList.remove('-on');
+    }
+});
+
+reMail.addEventListener('blur',function(){
+    if(!reMail.value){
+        reMailLabel.classList.remove('-on');
+        reMail.classList.remove('-on');
+    };
+});
+
+
 // 進度條 --------------------------------------
 let inputs = document.querySelectorAll("form .formInput");
 let form = document.getElementsByTagName("form")[0];
@@ -123,13 +147,18 @@ form.addEventListener('click', function () {
         if (i.value) {
             progressAmount += 1;
         }
-    }
+    };
     if(TAfinish){
         progressAmount += 1;
     }
+    if(reMail.value.search(emailRule)==-1){
+        progressAmount -= 1;
+    }
     if(progressAmount==6){
         pro1.style.backgroundColor = "var(--pri_green)"
-    }
+    }else{
+        pro1.style.backgroundColor = "#fff"
+    };
     progressSpan.style.height = `${progressAmount/7/2*100}%`
 });
 
@@ -152,5 +181,6 @@ window.addEventListener('scroll',function(){
     }else{
         progress.classList.remove("stop");
     }
-})
+});
+
 
