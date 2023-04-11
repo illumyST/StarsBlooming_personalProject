@@ -114,10 +114,13 @@ fai[1].addEventListener("click", function () {
 });
 pnum.addEventListener("keyup", function () {
     this.value = this.value.replace(/\D/g, "");
+    // if(this.value==0){
+    //     this.value=1;
+    // }
 });
 
 pnum.addEventListener("blur", function () {
-    if (!pnum.value) {
+    if (!(+pnum.value)) {
         pnum.value = 1;
     }
 });
@@ -172,24 +175,24 @@ function adding() {
         "price": price
     }
 
-// localstorage 的 cartItems ------------
+    // localstorage 的 cartItems ------------
     let cartItems = JSON.parse(localStorage.getItem("cartItems"));
 
     if (cartItems) { // 若存在
-        
+
         // 如果是同樣商品，就只修改商品數量
         let same = 0;
         let cnt = -1;
-        for(let i of cartItems){
-            cnt +=1;
-            if(i.itemId == cartItem.itemId && i.color == cartItem.color){
+        for (let i of cartItems) {
+            cnt += 1;
+            if (i.itemId == cartItem.itemId && i.color == cartItem.color) {
                 same = 1;
                 break;
             }
         };
-        if(same){
+        if (same) {
             cartItems[cnt].buyNum = parseInt(cartItems[cnt].buyNum) + parseInt(cartItem.buyNum);
-        }else{ // 如果不是，就新增
+        } else { // 如果不是，就新增
             cartItems.push(cartItem);
         }
     } else { // 若不存在
@@ -208,14 +211,14 @@ toCart.addEventListener('click', function () {
     //新增資料到 localstorage，並跑動畫
     if (choose) {
         plus.classList.add("-toCart");
-        setTimeout(adding,600);
-        setTimeout(function(){
+        setTimeout(adding, 600);
+        setTimeout(function () {
             plus.classList.remove("-toCart")
-        },800);
-        setTimeout(function(){
+        }, 800);
+        setTimeout(function () {
             fShowCartNum();
             plus.classList.remove("-toCart")
-        },600);
-   
+        }, 600);
+
     }
 });

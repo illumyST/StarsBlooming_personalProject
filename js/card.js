@@ -76,8 +76,8 @@ positionBtn.addEventListener('click', function (e) {
     // form 裡面的 btn 會造成頁面重整
     e.preventDefault();
     let ans = confirm(`歡迎使用自動定位！
-- 顯示「所在城市」請按「OK」
-- 顯示「所在經緯度」請按「Cancel」
+- 顯示「所在城市」請按「OK/確定」
+- 顯示「所在經緯度」請按「Cancel/取消」
 `);
     if (ans) {
         fetch('http://ip-api.com/json')
@@ -98,6 +98,7 @@ positionBtn.addEventListener('click', function (e) {
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
+        console.log("in");
     } else {
         locationInput.value = "Geolocation is not supported by this browser.";
     }
@@ -105,6 +106,7 @@ function getLocation() {
 function showPosition(position) {
     var NS = (position.coords.latitude).toFixed(3);
     var WE = (position.coords.longitude).toFixed(3);
+    console.log(NS,WE)
     locationInput.value = `經度 ${WE} ， 緯度 ${NS}`;
 };
 

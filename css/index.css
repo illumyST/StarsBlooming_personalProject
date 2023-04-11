@@ -267,7 +267,8 @@ main svg {
     left: 0;
     top: 412.5px;
     height: 167px;
-    width: 100vw;
+    margin: 0 auto;
+    width: 80%;
     background: #41382f;
     overflow: hidden;
     z-index: -3;
